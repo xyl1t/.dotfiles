@@ -54,7 +54,7 @@ return packer.startup{function(use)
 	use "kyazdani42/nvim-web-devicons"               -- icons
 	use "psliwka/vim-smoothie"                       -- smooth scrolling
 	use "folke/which-key.nvim"                       -- shows which keys are available
-	use {"rcarriga/nvim-notify", config = function() vim.notify = require("notify") end} -- shows notifications like a true gui
+	-- use {"rcarriga/nvim-notify", config = function() vim.notify = require("notify") end} -- shows notifications like a true gui, kinda slows down stuff when lots of them
 	-- use "itchyny/vim-highlighturl"   -- highlight url
 	-- use "lukas-reineke/indent-blankline.nvim"
 	-- use {'edluffy/specs.nvim', config = function() require('specs').setup() end}
@@ -110,7 +110,7 @@ return packer.startup{function(use)
 	use "nvim-telescope/telescope-media-files.nvim"
 
 	-- Treesitter
-	use {"nvim-treesitter/nvim-treesitter", run = ":TSUpdate", commit = '668de0951a36ef17016074f1120b6aacbe6c4515' } -- https://github.com/nvim-treesitter/nvim-treesitter/issues/2295
+	use "nvim-treesitter/nvim-treesitter"            -- https://github.com/nvim-treesitter/nvim-treesitter/issues/2295
 	use "windwp/nvim-ts-autotag"                     -- auto tag for xml/html
 	use "JoosepAlviste/nvim-ts-context-commentstring"
 

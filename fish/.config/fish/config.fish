@@ -7,9 +7,13 @@ export VISUAL=nvim
 export EDITOR="$VISUAL"
 
 # ALIASES
-alias code 'open -a "Visual Studio Code"'
-alias subl 'open -a "Sublime Text"'
-alias aplay "mplayer -cache 1024 -quiet -rawaudio samplesize=1:channels=1:rate=8000 -demuxer rawaudio -"
+switch (uname)
+case Darwin
+	alias code 'open -a "Visual Studio Code"'
+	alias subl 'open -a "Sublime Text"'
+	alias aplay "mplayer -cache 1024 -quiet -rawaudio samplesize=1:channels=1:rate=8000 -demuxer rawaudio -"
+end
+
 alias vim "nvim"
 alias ls 'exa -lF --color=always --group-directories-first'
 alias ll 'exa -alF --color=always --group-directories-first'
@@ -29,12 +33,15 @@ alias vrc "vim -c ':cd ~/.config/nvim' -c ':Bdelete' -c ':Alpha'"
 #alias vrc "nvim ~/.config/nvim/ -c ':e init.lua'"
 
 
-set PATH "/Library/Frameworks/Python.framework/Versions/3.9/bin:$PATH"
-export PATH
-# source ~/Home/Documents/Programming/C++/clones/emsdk/emsdk_env.fish
-source ~/.iterm2_shell_integration.fish
+switch (uname)
+case Darwin
+	set PATH "/Library/Frameworks/Python.framework/Versions/3.9/bin:$PATH"
+	export PATH
+	# source ~/Home/Documents/Programming/C++/clones/emsdk/emsdk_env.fish
+	source ~/.iterm2_shell_integration.fish
 
-fish_add_path /usr/local/sbin
+	fish_add_path /usr/local/sbin
+end
 
 # this is makes it so that ctrl+f works in vi mode
 function fish_user_key_bindings

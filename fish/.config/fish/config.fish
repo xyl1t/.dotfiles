@@ -29,9 +29,10 @@ alias .3 'cd ../../..'
 alias .4 'cd ../../../..'
 alias .5 'cd ../../../../..'
 # alias nvimrc 'nvim ~/.config/nvim/init.vim'
-alias vrc "vim -c ':cd ~/.config/nvim' -c ':Bdelete' -c ':Alpha'"
-#alias vrc "nvim ~/.config/nvim/ -c ':e init.lua'"
-
+alias vrc  "vim -c ':cd ~/.config/nvim' -c ':Bdelete' -c ':Alpha'"
+alias fcnf "vim -c ':cd ~/.config/fish' -c ':e config.fish'"
+alias e vrc
+alias lg lazygit
 
 switch (uname)
 case Darwin
@@ -49,3 +50,6 @@ function fish_user_key_bindings
 	bind -M insert \cf accept-autosuggestion
 	bind \cf accept-autosuggestion
 end
+
+# bat theme
+set -xU BAT_THEME gruvbox-dark

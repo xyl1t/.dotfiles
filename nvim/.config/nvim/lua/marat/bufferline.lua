@@ -167,74 +167,74 @@ bufferline.setup {
 
 		-------------------------------
 
-		--[[ error = {
-			guifg = { attribute = "fg", highlight = "LspDiagnosticsDefaultError" },
+		error = {
+			guifg = { attribute = "fg", highlight = "DiagnosticError" },
 			guibg = { attribute = "bg", highlight = "TabLine" },
 		},
 		error_diagnostic = {
-			guifg = { attribute = "fg", highlight = "LspDiagnosticsDefaultError" },
+			guifg = { attribute = "fg", highlight = "DiagnosticError" },
 			guibg = { attribute = "bg", highlight = "TabLine" },
 		},
 		error_visible = {
-			guifg = { attribute = 'fg', highlight = 'TabLine' },
+			guifg = { attribute = 'fg', highlight = 'DiagnosticError' },
 			guibg = { attribute = 'bg', highlight = 'TabLine' },
 		},
 		error_diagnostic_visible = {
-			guifg = { attribute = 'fg', highlight = 'TabLine' },
+			guifg = { attribute = 'fg', highlight = 'DiagnosticError' },
 			guibg = { attribute = 'bg', highlight = 'TabLine' },
 		},
 
 		warning = {
-			guifg = { attribute = "fg", highlight = "LspDiagnosticsDefaultWarning" },
+			guifg = { attribute = "fg", highlight = "DiagnosticWarn" },
 			guibg = { attribute = "bg", highlight = "TabLine" },
 		},
 		warning_diagnostic = {
-			guifg = { attribute = "fg", highlight = "LspDiagnosticsDefaultWarning" },
+			guifg = { attribute = "fg", highlight = "DiagnosticWarn" },
 			guibg = { attribute = "bg", highlight = "TabLine" },
 		},
 		warning_visible = {
-			guifg = { attribute = 'fg', highlight = 'TabLine' },
+			guifg = { attribute = 'fg', highlight = 'DiagnosticWarn' },
 			guibg = { attribute = 'bg', highlight = 'TabLine' },
 		},
 		warning_diagnostic_visible = {
-			guifg = { attribute = 'fg', highlight = 'TabLine' },
+			guifg = { attribute = 'fg', highlight = 'DiagnosticWarn' },
 			guibg = { attribute = 'bg', highlight = 'TabLine' },
 		},
 
 		info = {
-			guifg = { attribute = "fg", highlight = "LspDiagnosticsDefaultInformation" },
+			guifg = { attribute = "fg", highlight = "DiagnosticInfo" },
 			guibg = { attribute = "bg", highlight = "TabLine" },
 		},
 		info_diagnostic = {
-			guifg = { attribute = "fg", highlight = "LspDiagnosticsDefaultInformation" },
+			guifg = { attribute = "fg", highlight = "DiagnosticInfo" },
 			guibg = { attribute = "bg", highlight = "TabLine" },
 		},
 		info_visible = {
-			guifg = { attribute = 'fg', highlight = 'TabLine' },
+			guifg = { attribute = 'fg', highlight = 'DiagnosticInfo' },
 			guibg = { attribute = 'bg', highlight = 'TabLine' },
 		},
 		info_diagnostic_visible = {
-			guifg = { attribute = 'fg', highlight = 'TabLine' },
+			guifg = { attribute = 'fg', highlight = 'DiagnosticInfo' },
 			guibg = { attribute = 'bg', highlight = 'TabLine' },
 		},
 
 		hint = {
-			guifg = { attribute = "fg", highlight = "LspDiagnosticsDefaultHint" },
+			guifg = { attribute = "fg", highlight = "DiagnosticHint" },
 			guibg = { attribute = "bg", highlight = "TabLine" },
 		},
 		hint_diagnostic = {
-			guifg = { attribute = "fg", highlight = "LspDiagnosticsDefaultHint" },
+			guifg = { attribute = "fg", highlight = "DiagnosticHint" },
 			guibg = { attribute = "bg", highlight = "TabLine" },
 		},
 		hint_visible = {
-			guifg = { attribute = 'fg', highlight = 'TabLine' },
+			guifg = { attribute = 'fg', highlight = 'DiagnosticHint' },
 			guibg = { attribute = 'bg', highlight = 'TabLine' },
 		},
 		hint_diagnostic_visible = {
-			guifg = { attribute = 'fg', highlight = 'TabLine' },
+			guifg = { attribute = 'fg', highlight = 'DiagnosticHint' },
 			guibg = { attribute = 'bg', highlight = 'TabLine' },
 		},
-]]
+
 	},
 }
 

@@ -30,9 +30,10 @@ alias .4 'cd ../../../..'
 alias .5 'cd ../../../../..'
 # alias nvimrc 'nvim ~/.config/nvim/init.vim'
 alias vrc  "vim -c ':cd ~/.config/nvim' -c ':Bdelete' -c ':Alpha'"
-alias fcnf "vim -c ':cd ~/.config/fish' -c ':e config.fish'"
+alias fconf "vim -c ':cd ~/.config/fish' -c ':e config.fish'"
 alias e vrc
 alias lg lazygit
+alias ncdu "ncdu --color dark"
 
 switch (uname)
 case Darwin

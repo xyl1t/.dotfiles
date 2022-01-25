@@ -10,6 +10,7 @@ vim.opt.fileencoding = "utf-8"                  -- the encoding written to a fil
 vim.opt.hlsearch = true                         -- highlight all matches on previous search pattern
 vim.opt.ignorecase = true                       -- ignore case in search patterns
 vim.opt.mouse = "a"                             -- allow the mouse to be used in neovim
+vim.opt.pumwidth = 32                           -- pop up menu height
 vim.opt.pumheight = 16                          -- pop up menu height
 vim.opt.showmode = false                        -- we don't need to see things like -- INSERT -- anymore
 vim.o.modeline = false                          -- I don't know if I need this, it gives me errors on some files, so I disabled it

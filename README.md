@@ -4,7 +4,7 @@ Dotfiles mostly for neovim and fish
 
 ## Screenshots
 
-![fish](./fish.png)
+![fish](./terminal.png)
 
 ![vim1](./vim.png)
 

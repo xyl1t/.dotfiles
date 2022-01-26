@@ -2,6 +2,15 @@
 
 Dotfiles mostly for neovim and fish
 
+## Screenshots
+
+![fish](./fish.png)
+
+![vim1](./vim.png)
+
+![vim2](./vim2.png)
+
+
 ## Installation
 
 If you are me or really like my dotfiles and want to install them,
@@ -14,3 +23,5 @@ cd .dotfiles
 # install dotfiles
 stow -vt ~ */
 ```
+
+

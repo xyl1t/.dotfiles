@@ -1,6 +1,6 @@
 # My dotfiles
 
-Dotfiles mostly for neovim and fish
+Dotfiles mostly for neovim and fish. Color scheme: gruvbox
 
 ## Screenshots
 

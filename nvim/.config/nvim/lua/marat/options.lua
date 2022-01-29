@@ -77,3 +77,6 @@ vim.g.highlightedyank_highlight_duration = 200
 vim.g.neovide_cursor_vfx_mode = "pixiedust"
 vim.g.neovide_cursor_vfx_mode = "sonicboom"
 
+
+vim.g.highlightedyank_highlight_duration = 200
+

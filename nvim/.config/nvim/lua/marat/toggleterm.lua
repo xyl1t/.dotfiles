@@ -27,12 +27,12 @@ toggleterm.setup({
 	close_on_exit = true,
 	shell = vim.o.shell,
 	float_opts = {
-		width = function(_)
-			return math.floor(vim.o.columns * 0.7)
-		end,
-		height = function(_)
-			return math.floor(vim.o.lines * 0.7)
-		end,
+		-- width = function(_)
+		-- 	return math.floor(vim.o.columns * 0.7)
+		-- end,
+		-- height = function(_)
+		-- 	return math.floor(vim.o.lines * 0.7)
+		-- end,
 		border = "curved",
 		winblend = 0,
 		highlights = {

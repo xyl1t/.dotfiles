@@ -12,6 +12,16 @@ telescope.setup {
 		-- selection_caret = " ",
 		path_display = { "smart" },
 
+		borderchars = {
+			{ "─", "│", "─", "│", '┌', '┐', '┘', '└' },
+			prompt  = { "─", "│", "─", "│", '┌', '┐', '┘', '└' },
+			results = { "─", "│", "─", "│", '┌', '┐', '┘', '└' },
+			preview = { "─", "│", "─", "│", '┌', '┐', '┘', '└' },
+		},
+
+		results_title = '',
+		preview_title = '',
+
 		mappings = {
 			i = {
 				["<C-j>"]  = actions.cycle_history_next,
@@ -76,6 +86,7 @@ telescope.setup {
 				["?"] = actions.which_key,
 			},
 		},
+
 	},
 	pickers = {
 		-- Default configuration for builtin pickers goes here:

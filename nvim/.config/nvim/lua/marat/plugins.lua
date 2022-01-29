@@ -59,6 +59,7 @@ return packer.startup{function(use)
 	-- use "lukas-reineke/indent-blankline.nvim"
 	-- use {'edluffy/specs.nvim', config = function() require('specs').setup() end}
 	-- https://github.com/petertriho/nvim-scrollbar -- cool scrollbar that also shows diagnostics
+	-- use "machakann/vim-highlightedyank"
 
 	-- colorscheme
 	use {"ellisonleao/gruvbox.nvim", requires = {"rktjmp/lush.nvim"}}

@@ -1,5 +1,6 @@
 -- :help options
-vim.cmd [[filetype on]]
+-- this is extremly slow
+-- vim.cmd [[filetype on]]
 
 vim.opt.backup = false                          -- creates a backup file
 vim.opt.clipboard = "unnamedplus"               -- allows neovim to access the system clipboard
@@ -47,27 +48,32 @@ vim.opt.pumheight=16
 vim.opt.pumblend=16
 vim.opt.shortmess:append "c"
 vim.opt.foldlevelstart=20
+
+vim.g.netrw_banner=0                            -- disable netrw banner
+vim.g.netrw_liststyle=3                         -- display netrw as tree
+vim.g.do_filetype_lua = true                    -- use the new lua implementation of filetype
+
 vim.cmd "set whichwrap+=<,>,[,],h,l"
 -- vim.cmd [[set iskeyword+=-]]
 vim.cmd [[set formatoptions-=cro]] -- TODO: this doesn't seem to work
 vim.cmd "set fcs=eob:\\ "
 vim.cmd [[autocmd BufNewFile,BufRead * setlocal formatoptions-=co]]
 
-vim.g.netrw_banner=0                            -- disable netrw banner
-vim.g.netrw_liststyle=3                         -- display netrw as tree
-
+-- highlight 80
 -- vim.cmd [[highlight ColorColumn gui=inverse cterm=inverse]]
 vim.cmd [[autocmd FileType cpp,c,javascript,java call matchadd('ColorColumn', '\%81v', 100)]]
 
---[[vim.cmd[[
-	function! xylit()
-		highlight ColorColumn gui=inverse cterm=inverse
-		call matchadd('ColorColumn', '\%81v', 100)
-	endfunction
-
+-- highlight yanked text for 200ms
+vim.cmd[[
+augroup highlight_yank
+autocmd!
+au TextYankPost * silent! lua vim.highlight.on_yank({higroup="Visual", timeout=200})
+augroup END
 ]]
---]]
+-- in case you use the vim-highlightedyank plugin
+vim.g.highlightedyank_highlight_duration = 200
 
+-- neovide settings
 vim.g.neovide_cursor_vfx_mode = "pixiedust"
 vim.g.neovide_cursor_vfx_mode = "sonicboom"
 

@@ -31,7 +31,7 @@ alias .5 'cd ../../../../..'
 # alias nvimrc 'nvim ~/.config/nvim/init.vim'
 alias vrc  "vim -c ':cd ~/.config/nvim' -c ':Bdelete' -c ':Alpha'"
 alias fconf "vim -c ':cd ~/.config/fish' -c ':e config.fish'"
-alias e vrc
+alias e nvim
 alias lg lazygit
 alias ncdu "ncdu --color dark"
 
@@ -56,5 +56,11 @@ function fish_user_key_bindings
 	bind \cn history-search-forward
 end
 
+function fish_greeting
+
+pfetch
+end
+
+# misc
 # bat theme
 set -xU BAT_THEME gruvbox-dark

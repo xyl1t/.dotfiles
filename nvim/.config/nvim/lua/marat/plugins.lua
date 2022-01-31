@@ -104,6 +104,7 @@ return packer.startup{function(use)
 	use "vim-pandoc/vim-pandoc"                      -- pandoc commands for vim (mostly used with markdown)
 	use 'rwxrob/vim-pandoc-syntax-simple'            -- stripped down version of pandoc syntax, very good for WYSIWYG
 	use 'weilbith/nvim-code-action-menu'
+	use "ray-x/lsp_signature.nvim"                   -- LSP signature help
 
 	-- Telescope
 	use "nvim-telescope/telescope.nvim"

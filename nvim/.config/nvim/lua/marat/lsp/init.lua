@@ -5,4 +5,5 @@ end
 
 require("marat.lsp.lsp-installer")
 require("marat.lsp.handlers").setup()
+require("marat.lsp.lsp-signature")
 

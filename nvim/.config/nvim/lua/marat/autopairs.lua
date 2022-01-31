@@ -1,5 +1,9 @@
 -- Setup nvim-cmp.
-local npairs = require("nvim-autopairs")
+local ok, npairs = pcall(require, "nvim-autopairs")
+if not ok then
+	vim.notify("nvim-autopairs not installed")
+	return
+end
 
 npairs.setup {
   check_ts = true,

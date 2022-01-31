@@ -1,4 +1,8 @@
-local comment = require("Comment")
+local ok, comment = pcall(require, "Comment")
+if not ok then
+	vim.notify("Comment.nvim not installed")
+	return
+end
 
 comment.setup {
 	pre_hook = function(ctx)

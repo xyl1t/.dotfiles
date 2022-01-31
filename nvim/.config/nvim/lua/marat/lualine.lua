@@ -1,5 +1,6 @@
-local status_ok, lualine = pcall(require, "lualine")
-if not status_ok then
+local ok, lualine = pcall(require, "lualine")
+if not ok then
+	vim.notify("lualine not installed")
 	return
 end
 

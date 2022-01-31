@@ -1,4 +1,8 @@
-local telescope = require("telescope")
+local ok, telescope = pcall(require, "telescope")
+if not ok then
+	vim.notify("telescope not installed")
+	return
+end
 
 telescope.load_extension('media_files')
 telescope.load_extension('fzf')

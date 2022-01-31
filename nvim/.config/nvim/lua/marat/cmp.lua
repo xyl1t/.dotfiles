@@ -1,5 +1,8 @@
-local cmp = require("cmp")
-
+local ok, cmp = pcall(require, "cmp")
+if not ok then
+	vim.notify("cmp not installed")
+	return
+end
 
 local luasnip = require("luasnip")
 

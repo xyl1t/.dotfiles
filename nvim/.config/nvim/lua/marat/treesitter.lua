@@ -1,4 +1,8 @@
-local configs = require("nvim-treesitter.configs")
+local ok, configs = pcall(require, "nvim-treesitter.configs")
+if not ok then
+	vim.notify("Treesitter not installed. What neovim version are you on??")
+	return
+end
 
 configs.setup {
 	ensure_installed = {"bash", "c", "c_sharp", "cmake", "comment", "cpp", "css", "fish", "glsl", "go", "html", "http", "java", "javascript", "jsonc", "kotlin", "latex", "lua", "make", "markdown", "php", "python", "regex", "rust", "ruby", "scss", "svelte", "tsx", "typescript", "vim", "vue", "yaml"}, -- one of "all", "maintained" (parsers with maintainers), or a list of languages

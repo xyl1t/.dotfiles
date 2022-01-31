@@ -5,7 +5,11 @@ height = function(term)
 return math.floor(vim.o.lines * 0.7)
 end ]]
 
-local toggleterm = require("toggleterm")
+local ok, toggleterm = pcall(require, "toggleterm")
+if not ok then
+	vim.notify("toggleterm not installed")
+	return
+end
 
 toggleterm.setup({
 	size = function(term)

@@ -64,7 +64,7 @@ bufferline.setup {
 		persist_buffer_sort = true, -- whether or not custom sorted buffers should persist
 		-- can also be a table containing 2 custom separators
 		-- [focused and unfocused]. eg: { '|', '|' }
-		separator_style = "thin", -- "slant" | "padded_slant" | "thick" | "thin" | { "any", "any" }
+		separator_style = "slant", -- "slant" | "padded_slant" | "thick" | "thin" | { "any", "any" }
 		enforce_regular_tabs = true,
 		always_show_bufferline = true,
 		-- sort_by = 'id' | 'extension' | 'relative_directory' | 'directory' | 'tabs' | function(buffer_a, buffer_b)
@@ -150,17 +150,17 @@ bufferline.setup {
 		},
 
 		separator = {
-			guifg = { attribute = "bg", highlight = "TabLine" },
+			guifg = { attribute = "bg", highlight = "Normal" },
 			guibg = { attribute = "bg", highlight = "TabLine" },
 		},
 		separator_selected = {
-			guifg = { attribute = "fg", highlight = "TabLineSel" },
-			guibg = { attribute = "bg", highlight = "TabLineSel" },
+			guifg = { attribute = "bg", highlight = "Normal" },
+			guibg = { attribute = "bg", highlight = "Normal" },
 		},
-		-- separator_visible = {
-		--   guifg = {attribute='bg',highlight='TabLine'},
-		--   guibg = {attribute='bg',highlight='TabLine'}
-		--},
+		separator_visible = {
+		  guifg = { attribute = 'bg', highlight = 'Normal' },
+		  guibg = { attribute = 'bg', highlight = 'TabLine' }
+		},
 		indicator_selected = {
 			guifg = { attribute = "fg", highlight = "LspDiagnosticsDefaultHint" },
 			guibg = { attribute = "bg", highlight = "Normal" },

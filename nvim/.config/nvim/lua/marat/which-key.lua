@@ -94,7 +94,7 @@ local mappings = {
 	["m"] = { "<cmd>MaximizerToggle!<CR>", "Maximize window" },
 	["P"] = { "<cmd>Telescope projects<cr>", "Projects" },
 	["v"] = { "<cmd>lua require('telescope.builtin').find_files(require('marat.telescope').get_custom_dropdown({ prompt_title = '< VimRC >', cwd = '~/.config/nvim', }))<CR>", "Vimrc" },
-	["r"] = { "<cmd>so ~/.config/nvim/init.lua", "Source vimrc" },
+	["r"] = { "<cmd>so ~/.config/nvim/init.lua<CR>", "Source vimrc" },
 
 	-- d = {
 	-- 	name = "Debug",

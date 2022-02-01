@@ -4,6 +4,13 @@ if not status_ok then
 	return
 end
 
+local separator_style = 'slant'
+local separator_highlight = 'Normal'
+if vim.g.transparent_background then
+	separator_style = 'thin'
+	separator_highlight = 'TabLine'
+end
+
 bufferline.setup {
 	options = {
 		numbers = "none", -- | "ordinal" | "buffer_id" | "both" | function({ ordinal, id, lower, raise }): string,
@@ -64,7 +71,7 @@ bufferline.setup {
 		persist_buffer_sort = true, -- whether or not custom sorted buffers should persist
 		-- can also be a table containing 2 custom separators
 		-- [focused and unfocused]. eg: { '|', '|' }
-		separator_style = "slant", -- "slant" | "padded_slant" | "thick" | "thin" | { "any", "any" }
+		separator_style = separator_style, -- "slant" | "padded_slant" | "thick" | "thin" | { "any", "any" }
 		enforce_regular_tabs = true,
 		always_show_bufferline = true,
 		-- sort_by = 'id' | 'extension' | 'relative_directory' | 'directory' | 'tabs' | function(buffer_a, buffer_b)
@@ -90,6 +97,19 @@ bufferline.setup {
 		buffer_visible = {
 			guifg = { attribute = "fg", highlight = "TabLine" },
 			guibg = { attribute = "bg", highlight = "TabLine" },
+		},
+
+		separator = {
+			guifg = { attribute = "bg", highlight = separator_highlight },
+			guibg = { attribute = "bg", highlight = "TabLine" },
+		},
+		separator_selected = {
+			guifg = { attribute = "bg", highlight = "Normal" },
+			guibg = { attribute = "bg", highlight = "Normal" },
+		},
+		separator_visible = {
+			guifg = { attribute = 'bg', highlight = 'Normal' },
+			guibg = { attribute = 'bg', highlight = 'TabLine' }
 		},
 
 		close_button = {
@@ -149,18 +169,6 @@ bufferline.setup {
 			guibg = { attribute = "bg", highlight = "TabLine" },
 		},
 
-		separator = {
-			guifg = { attribute = "bg", highlight = "Normal" },
-			guibg = { attribute = "bg", highlight = "TabLine" },
-		},
-		separator_selected = {
-			guifg = { attribute = "bg", highlight = "Normal" },
-			guibg = { attribute = "bg", highlight = "Normal" },
-		},
-		separator_visible = {
-		  guifg = { attribute = 'bg', highlight = 'Normal' },
-		  guibg = { attribute = 'bg', highlight = 'TabLine' }
-		},
 		indicator_selected = {
 			guifg = { attribute = "fg", highlight = "LspDiagnosticsDefaultHint" },
 			guibg = { attribute = "bg", highlight = "Normal" },

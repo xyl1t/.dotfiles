@@ -1,6 +1,10 @@
 # My dotfiles
 
-Dotfiles mostly for neovim and fish. Color scheme: gruvbox
+Dotfiles mostly for neovim, fish and tmux. 
+
+Current color scheme of choice: [gruvbox](https://github.com/morhetz/gruvbox)
+
+Fonts: Terminus or [Cozette](https://github.com/slavfox/Cozette)
 
 ## Screenshots
 

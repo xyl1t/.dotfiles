@@ -61,7 +61,7 @@ vim.cmd [[autocmd BufNewFile,BufRead * setlocal formatoptions-=co]]
 
 -- highlight 80
 -- vim.cmd [[highlight ColorColumn gui=inverse cterm=inverse]]
-vim.cmd [[autocmd FileType cpp,c,javascript,java call matchadd('ColorColumn', '\%81v', 100)]]
+vim.cmd [[autocmd FileType cpp,c,javascript,java,sql call matchadd('ColorColumn', '\%81v', 100)]]
 
 -- highlight yanked text for 200ms
 vim.cmd[[

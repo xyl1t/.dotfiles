@@ -83,7 +83,7 @@ bufferline.setup {
 		},
 
 		buffer_selected = {
-			guifg = { attribute = 'fg', highlight = 'Normal' },
+			guifg = { attribute = 'fg', highlight = 'TabLineSel' },
 			guibg = { attribute = 'bg', highlight = 'Normal' },
 			gui = "bold"
 		},

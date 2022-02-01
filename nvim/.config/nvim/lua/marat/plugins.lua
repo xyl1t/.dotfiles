@@ -64,8 +64,8 @@ return packer.startup{function(use)
 	-- colorscheme
 	use {"ellisonleao/gruvbox.nvim", requires = {"rktjmp/lush.nvim"}}
 	-- use "mhdahmad/gruvbox.nvim"
-	use {"sainnhe/sonokai", cmd = "colorscheme"}
-	use {"lunarVim/colorschemes", cmd = "colorscheme"}
+	use {"sainnhe/sonokai"}
+	use {"lunarVim/colorschemes"}
 	use {"catppuccin/nvim", as = "catppuccin"}
 	-- use "lifepillar/vim-gruvbox8"
 	-- https://github.com/sainnhe/everforest
@@ -78,7 +78,7 @@ return packer.startup{function(use)
 	-- use "cohama/lexima.vim"
 	use "numToStr/Comment.nvim"                      -- comments: gcc -> line, gc[N] comment number of lines
 	use "nvim-lualine/lualine.nvim"                  -- cool statusbar
-	use {"sbdchd/neoformat", cmd = "Neoformat"}                           -- code formatter
+	use {"sbdchd/neoformat", cmd = "Neoformat"}      -- code formatter
 	use "b0o/SchemaStore.nvim"                       -- json schemas for lsp
 	use {"iamcco/markdown-preview.nvim", run = "cd app && yarn install"} -- Markdown previewr
 	use "kyazdani42/nvim-tree.lua"                   -- directory tree like netrw but better
@@ -130,7 +130,13 @@ return packer.startup{function(use)
 
 	-- snippets
 	use "L3MON4D3/LuaSnip"                           --snippet engine
-	use "rafamadriz/friendly-snippets"               -- a bunch of snippets to use
+	-- use "rafamadriz/friendly-snippets"               -- a bunch of snippets to use
+	use 'garbas/vim-snipmate'                        -- a bunch of snippets (better)
+	use 'tomtom/tlib_vim'
+	use 'MarcWeber/vim-addon-mw-utils'
+
+	-- Optional:
+	use 'honza/vim-snippets'
 
 	-- LSP
 	use "neovim/nvim-lspconfig"                      -- enable LSP

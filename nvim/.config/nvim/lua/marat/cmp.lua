@@ -6,7 +6,9 @@ end
 
 local luasnip = require("luasnip")
 
-require("luasnip/loaders/from_vscode").lazy_load()
+vim.cmd[[let g:snipMate = { 'snippet_version' : 1 }]]
+-- require("luasnip/loaders/from_vscode").lazy_load()
+require("luasnip.loaders.from_snipmate").load()
 
 local check_backspace = function()
 	local col = vim.fn.col "." - 1

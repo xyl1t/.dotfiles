@@ -21,7 +21,9 @@ require "marat.auto-session"
 require "marat.alpha"
 require "marat.autopairs"
 require "marat.which-key"
+require "marat.pandoc"
 -- vim.cmd[[let b:lexima_disabled=1]]
 
-vim.g.code_action_menu_show_details = false
+-- what is this???
+-- vim.g.code_action_menu_show_details = false
 

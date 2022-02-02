@@ -13,7 +13,8 @@ configs.setup {
 		disable = { "" }, -- list of language that will be disabled
 		additional_vim_regex_highlighting = true,
 	},
-	indent = { enable = true, disable = { "yaml", "c", "cpp", "java" } },
+	-- indent = { enable = true, disable = { "yaml", "c", "cpp", "java", "javascript" } },
+	indent = { enable = false },
 	autotag = {
 		enable = true,
 		filetypes = { 'xml', 'html', 'javascript', 'javascriptreact', 'typescriptreact', 'svelte', 'vue' }

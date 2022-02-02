@@ -5,10 +5,11 @@ if not status_ok then
 end
 
 local separator_style = 'slant'
-local separator_highlight = 'Normal'
+-- local separator_highlight = 'Normal'
+local separator_highlight = 'TabLineFill'
 if vim.g.transparent_background then
-	separator_style = 'thin'
-	separator_highlight = 'TabLine'
+	separator_style = 'slant'
+	separator_highlight = 'TabLineFill'
 end
 
 bufferline.setup {
@@ -82,7 +83,7 @@ bufferline.setup {
 	highlights = {
 		fill = {
 			guifg = { attribute = "fg", highlight = "Normal" },
-			guibg = { attribute = "bg", highlight = "Normal" },
+			guibg = { attribute = "bg", highlight = separator_highlight},
 		},
 		background = {
 			guifg = { attribute = "fg", highlight = "TabLine" },
@@ -100,15 +101,15 @@ bufferline.setup {
 		},
 
 		separator = {
-			guifg = { attribute = "bg", highlight = separator_highlight },
+			guifg = { attribute = "bg", highlight = separator_highlight},
 			guibg = { attribute = "bg", highlight = "TabLine" },
 		},
 		separator_selected = {
-			guifg = { attribute = "bg", highlight = "Normal" },
+			guifg = { attribute = "bg", highlight = separator_highlight},
 			guibg = { attribute = "bg", highlight = "Normal" },
 		},
 		separator_visible = {
-			guifg = { attribute = 'bg', highlight = 'Normal' },
+			guifg = { attribute = 'bg', highlight = separator_highlight},
 			guibg = { attribute = 'bg', highlight = 'TabLine' }
 		},
 

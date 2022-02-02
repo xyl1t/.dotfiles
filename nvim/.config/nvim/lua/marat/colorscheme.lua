@@ -3,6 +3,7 @@ vim.g.transparent_background = true
 -- gruvbox settings
 vim.g.gruvbox_italicize_comments = false
 vim.g.gruvbox_invert_selection = false
+vim.g.gruvbox_contrast_dark = 'soft'
 
 -- Available values: 'default', 'atlantis', 'andromeda', 'shusia', 'maia', 'espresso'
 vim.g.sonokai_style = 'andromeda'
@@ -36,7 +37,14 @@ if colorscheme == "gruvbox" then
 	]]
 	else
     vim.cmd [[
-		hi SignColumn guibg=#282828
+		" hi SignColumn guibg=#282828
+		hi SignColumn guibg=#322302f
+		hi GitSignsAdd guibg=#322302f
+		hi GitSignsDelete guibg=#322302f
+		hi GitSignsChange guifg=#fe8019 guibg=#322302f
+
+		hi TabLine guifg=#7c6f64 guibg=#282828 cterm=underline ctermfg=15 ctermbg=242
+		hi TabLineFill guifg=#7c6f64 guibg=#1d2021 cterm=reverse
 	]]
 	end
 
@@ -54,9 +62,7 @@ if colorscheme == "gruvbox" then
     hi PmenuSel guifg=#fbf1c7 " set text color of selected item in auto completion menu
 	hi CmpItemAbbrMatch    ctermfg=white  guifg=#a3d5F8
 
-	" hi TabLine guifg=#7c6f64 guibg=#1d2021 cterm=underline ctermfg=15 ctermbg=242
-	" hi TabLineFill guifg=#7c6f64 guibg=#1d2021 cterm=reverse
-	" hi TabLineSel guifg=#fabd2f guibg=#3c3836 cterm=bold
+	hi TabLineSel guifg=#fabd2f guibg=#3c3836 cterm=bold
     ]]
 end
 

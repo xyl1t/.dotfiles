@@ -4,13 +4,12 @@ if not status_ok then
 	return
 end
 
-local separator_style = 'slant'
--- local separator_highlight = 'Normal'
-local separator_highlight = 'TabLineFill'
-if vim.g.transparent_background then
-	separator_style = 'slant'
-	separator_highlight = 'TabLineFill'
-end
+-- local separator_style = 'slant'
+-- -- local separator_highlight = 'Normal'
+-- local separator_highlight = 'TabLineFill'
+-- if vim.g.transparent_background then
+-- 	separator_highlight = 'TabLineFill'
+-- end
 
 bufferline.setup {
 	options = {
@@ -72,7 +71,7 @@ bufferline.setup {
 		persist_buffer_sort = true, -- whether or not custom sorted buffers should persist
 		-- can also be a table containing 2 custom separators
 		-- [focused and unfocused]. eg: { '|', '|' }
-		separator_style = separator_style, -- "slant" | "padded_slant" | "thick" | "thin" | { "any", "any" }
+		separator_style = "slant", -- "slant" | "padded_slant" | "thick" | "thin" | { "any", "any" }
 		enforce_regular_tabs = true,
 		always_show_bufferline = true,
 		-- sort_by = 'id' | 'extension' | 'relative_directory' | 'directory' | 'tabs' | function(buffer_a, buffer_b)
@@ -83,7 +82,7 @@ bufferline.setup {
 	highlights = {
 		fill = {
 			guifg = { attribute = "fg", highlight = "Normal" },
-			guibg = { attribute = "bg", highlight = separator_highlight},
+			guibg = { attribute = "bg", highlight = "TabLineFill"},
 		},
 		background = {
 			guifg = { attribute = "fg", highlight = "TabLine" },
@@ -101,15 +100,15 @@ bufferline.setup {
 		},
 
 		separator = {
-			guifg = { attribute = "bg", highlight = separator_highlight},
+			guifg = { attribute = "bg", highlight = "TabLineFill"},
 			guibg = { attribute = "bg", highlight = "TabLine" },
 		},
 		separator_selected = {
-			guifg = { attribute = "bg", highlight = separator_highlight},
+			guifg = { attribute = "bg", highlight = "TabLineFill"},
 			guibg = { attribute = "bg", highlight = "Normal" },
 		},
 		separator_visible = {
-			guifg = { attribute = 'bg', highlight = separator_highlight},
+			guifg = { attribute = 'bg', highlight = "TabLineFill"},
 			guibg = { attribute = 'bg', highlight = 'TabLine' }
 		},
 

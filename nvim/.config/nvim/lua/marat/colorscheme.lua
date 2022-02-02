@@ -54,9 +54,9 @@ if colorscheme == "gruvbox" then
     hi PmenuSel guifg=#fbf1c7 " set text color of selected item in auto completion menu
 	hi CmpItemAbbrMatch    ctermfg=white  guifg=#a3d5F8
 
-	hi TabLine guifg=#7c6f64 guibg=#1d2021 cterm=underline ctermfg=15 ctermbg=242
-	hi TabLineFill guifg=#7c6f64 guibg=#1d2021 cterm=reverse
-	hi TabLineSel guifg=#fabd2f guibg=#3c3836 cterm=bold
+	" hi TabLine guifg=#7c6f64 guibg=#1d2021 cterm=underline ctermfg=15 ctermbg=242
+	" hi TabLineFill guifg=#7c6f64 guibg=#1d2021 cterm=reverse
+	" hi TabLineSel guifg=#fabd2f guibg=#3c3836 cterm=bold
     ]]
 end
 

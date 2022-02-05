@@ -109,6 +109,7 @@ cmp.setup {
 		end,
 	},
 	sources = {
+		{ name = 'calc' },
         { name = "nvim_lsp" },
         { name = "nvim_lua" },
         { name = "luasnip" },

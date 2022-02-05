@@ -105,6 +105,7 @@ return packer.startup{function(use)
 	use 'rwxrob/vim-pandoc-syntax-simple'            -- stripped down version of pandoc syntax, very good for WYSIWYG
 	use 'weilbith/nvim-code-action-menu'
 	use "ray-x/lsp_signature.nvim"                   -- LSP signature help
+	-- use 'michaelb/sniprun'                           -- Sniprun is a code runner plugin for neovim written in Lua and Rust.
 
 	-- Telescope
 	use "nvim-telescope/telescope.nvim"
@@ -127,6 +128,7 @@ return packer.startup{function(use)
 	use "saadparwaiz1/cmp_luasnip"                   -- snippet completions
 	use "hrsh7th/cmp-nvim-lsp"
 	use "hrsh7th/cmp-nvim-lua"
+	use "hrsh7th/cmp-calc"
 
 	-- snippets
 	use "L3MON4D3/LuaSnip"                           --snippet engine
@@ -134,9 +136,6 @@ return packer.startup{function(use)
 	use 'garbas/vim-snipmate'                        -- a bunch of snippets (better)
 	use 'tomtom/tlib_vim'
 	use 'MarcWeber/vim-addon-mw-utils'
-
-	-- Optional:
-	use 'honza/vim-snippets'
 
 	-- LSP
 	use "neovim/nvim-lspconfig"                      -- enable LSP

@@ -63,6 +63,8 @@ if colorscheme == "gruvbox" then
 	hi CmpItemAbbrMatch    ctermfg=white  guifg=#a3d5F8
 
 	hi TabLineSel guifg=#fabd2f guibg=#3c3836 cterm=bold
+
+	" hi Conceal guifg=#fabd2f
     ]]
 end
 

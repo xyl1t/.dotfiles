@@ -102,10 +102,12 @@ return packer.startup{function(use)
 	-- use "liuchengxu/vista.vim"
 	use "rmagatti/auto-session"                      -- automatically open buffers and windows on startup
 	use "vim-pandoc/vim-pandoc"                      -- pandoc commands for vim (mostly used with markdown)
-	use 'rwxrob/vim-pandoc-syntax-simple'            -- stripped down version of pandoc syntax, very good for WYSIWYG
+	-- use 'rwxrob/vim-pandoc-syntax-simple'            -- stripped down version of pandoc syntax, very good for WYSIWYG
+	use 'vim-pandoc/vim-pandoc-syntax'            -- stripped down version of pandoc syntax, very good for WYSIWYG
 	use 'weilbith/nvim-code-action-menu'
 	use "ray-x/lsp_signature.nvim"                   -- LSP signature help
 	-- use 'michaelb/sniprun'                           -- Sniprun is a code runner plugin for neovim written in Lua and Rust.
+	use "wellle/targets.vim"                         -- adds various text objects to give you more targets to operate on.
 
 	-- Telescope
 	use "nvim-telescope/telescope.nvim"

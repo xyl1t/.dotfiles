@@ -65,11 +65,21 @@ if colorscheme == "gruvbox" then
 	hi TabLineSel guifg=#fabd2f guibg=#3c3836 cterm=bold
 
 	" hi Conceal guifg=#fabd2f
+
+	hi Comment guifg=#a89984
+
+	hi pandocAtxHeader guifg=#fabd2f gui=bold
+	" hi pandocAtxStart guifg=#fabd2f gui=NONE
+	hi pandocListItemBullet guifg=#fabd2f gui=NONE
+	" hi pandocStrong guifg=#8ec07c gui=bold
+	hi pandocEmphasis guifg=#d3869b gui=italic
+	" hi pandocBlockQuote guifg=#d3869b gui=italic
+	" hi pandocNoFormatted guifg=#fb4934
     ]]
 end
 
 vim.cmd [[
-" hi link NvimTreeNormal TabLine
+" hi link NvimTreeNormal TabLine 
 " hi link NvimTreeVertSplit TabLine
 " hi link NvimTreeEndOfBuffer TabLine
 

@@ -22,6 +22,9 @@ vim.g.maplocalleader = " "
 keymap("n", "+", "<C-a>", opts)
 keymap("n", "-", "<C-x>", opts)
 
+keymap("n", '?', "<cmd>HopPattern<CR>", opts)
+keymap("n", '<C-c>', "<cmd>HopChar2<CR>", opts)
+
 -- Better window navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
 keymap("n", "<C-j>", "<C-w>j", opts)

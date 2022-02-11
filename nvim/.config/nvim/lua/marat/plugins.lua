@@ -84,8 +84,9 @@ return packer.startup{function(use)
 	use "kyazdani42/nvim-tree.lua"                   -- directory tree like netrw but better
 	use "andweeb/presence.nvim"                      -- Discord richt presence
 	use "unblevable/quick-scope"                     -- highlight characters that will jump to the word with f/t/F/T
-	-- use {"ggandor/lightspeed.nvim", after="quick-scope"} -- the missing vim motion
+	-- use {"ggandor/lightspeed.nvim", after='quick-scope'} -- the missing vim motion
 	use {"phaazon/hop.nvim", branch="v1"}
+	-- use "justinmk/vim-sneak"
 	use "akinsho/toggleterm.nvim"                  -- better terminal
 	use "szw/vim-maximizer"                          -- maximize a window
 	use "puremourning/vimspector"                    -- visual debugger

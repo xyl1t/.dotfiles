@@ -1,4 +1,5 @@
-vim.cmd[[
-	noremap ; ;
-	noremap , ,
-]]
+-- vim.cmd[[
+-- 	noremap ; ;
+-- 	noremap , ,
+-- ]]
+--

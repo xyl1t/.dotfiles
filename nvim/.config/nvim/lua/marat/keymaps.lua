@@ -23,7 +23,12 @@ keymap("n", "+", "<C-a>", opts)
 keymap("n", "-", "<C-x>", opts)
 
 keymap("n", '?', "<cmd>HopPattern<CR>", opts)
-keymap("n", '<C-c>', "<cmd>HopChar2<CR>", opts)
+keymap("n", 's', "<cmd>HopChar2AC<CR>", opts)
+keymap("n", 'S', "<cmd>HopChar2BC<CR>", opts)
+keymap("x", 's', "<cmd>HopChar2AC<CR>", opts)
+keymap("x", 'S', "<cmd>HopChar2BC<CR>", opts)
+keymap("v", 's', "<cmd>HopChar2AC<CR>", opts)
+keymap("v", 'S', "<cmd>HopChar2BC<CR>", opts)
 
 -- Better window navigation
 keymap("n", "<C-h>", "<C-w>h", opts)

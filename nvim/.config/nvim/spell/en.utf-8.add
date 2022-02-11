@@ -7,3 +7,5 @@ ibrary
 SGL
 TODO
 Shaders
+SDL2
+CMake

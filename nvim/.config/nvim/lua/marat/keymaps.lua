@@ -26,11 +26,11 @@ keymap("x", "-", "<C-x>", opts)
 keymap("v", "+", "<C-a>", opts)
 keymap("v", "-", "<C-x>", opts)
 
-keymap("n", '?', "<cmd>HopPattern<CR>", opts)
-keymap("n", 's', "<cmd>HopChar2AC<CR>", opts)
-keymap("n", 'S', "<cmd>HopChar2BC<CR>", opts)
-keymap("v", 's', "<cmd>HopChar2AC<CR>", opts)
-keymap("v", 'S', "<cmd>HopChar2BC<CR>", opts)
+-- keymap("n", '?', "<cmd>HopPattern<CR>", opts)
+-- keymap("n", 's', "<cmd>HopChar2AC<CR>", opts)
+-- keymap("n", 'S', "<cmd>HopChar2BC<CR>", opts)
+-- keymap("v", 's', "<cmd>HopChar2AC<CR>", opts)
+-- keymap("v", 'S', "<cmd>HopChar2BC<CR>", opts)
 
 -- Better window navigation
 keymap("n", "<C-h>", "<C-w>h", opts)

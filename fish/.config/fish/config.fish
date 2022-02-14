@@ -54,6 +54,8 @@ function fish_user_key_bindings
 	bind \cp history-search-backward
 	bind -M insert \cn history-search-forward
 	bind \cn history-search-forward
+	bind -M insert \el 'clear; commandline -f repaint'
+	bind \el 'clear; commandline -f repaint'
 end
 
 function fish_greeting

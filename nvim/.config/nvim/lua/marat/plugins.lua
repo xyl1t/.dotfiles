@@ -110,6 +110,7 @@ return packer.startup{function(use)
 	use "ray-x/lsp_signature.nvim"                   -- LSP signature help
 	-- use 'michaelb/sniprun'                           -- Sniprun is a code runner plugin for neovim written in Lua and Rust.
 	use "wellle/targets.vim"                         -- adds various text objects to give you more targets to operate on.
+	use "christoomey/vim-tmux-navigator"             -- seamless tmux panes and vim windows navigation
 
 	-- Telescope
 	use "nvim-telescope/telescope.nvim"

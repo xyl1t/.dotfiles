@@ -60,9 +60,10 @@ return packer.startup{function(use)
 	-- use {'edluffy/specs.nvim', config = function() require('specs').setup() end}
 	-- https://github.com/petertriho/nvim-scrollbar -- cool scrollbar that also shows diagnostics
 	-- use "machakann/vim-highlightedyank"
+	-- use {"petertriho/nvim-scrollbar", config=function () require("scrollbar").setup() end}
 
 	-- colorscheme
-	use {"ellisonleao/gruvbox.nvim", requires = {"rktjmp/lush.nvim"}}
+	use "ellisonleao/gruvbox.nvim"
 	-- use "mhdahmad/gruvbox.nvim"
 	use {"sainnhe/sonokai"}
 	use {"lunarVim/colorschemes"}

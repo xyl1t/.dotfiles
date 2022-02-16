@@ -11,12 +11,18 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
 -- Modes
---   normal_mode = "n",
---   insert_mode = "i",
---   visual_mode = "v",
---   visual_block_mode = "x",
---   term_mode = "t",
---   command_mode = "c",
+--[[
+ COMMANDS     MODES ~
+    n         Normal
+    v         Visual and Select
+    s         Select
+    x         Visual
+    o         Operator-pending
+    i         Insert
+    l         Insert, Command-line, Lang-Arg
+    c         Command-line
+    t         Terminal
+]]
 
 -- Normal --
 keymap("n", "+", "<C-a>", opts)
@@ -26,31 +32,22 @@ keymap("x", "-", "<C-x>", opts)
 keymap("v", "+", "<C-a>", opts)
 keymap("v", "-", "<C-x>", opts)
 
--- keymap("n", '?', "<cmd>HopPattern<CR>", opts)
--- keymap("n", 's', "<cmd>HopChar2AC<CR>", opts)
--- keymap("n", 'S', "<cmd>HopChar2BC<CR>", opts)
--- keymap("v", 's', "<cmd>HopChar2AC<CR>", opts)
--- keymap("v", 'S', "<cmd>HopChar2BC<CR>", opts)
+keymap("n", "M", "<cmd>Man<CR>", opts)
 
 -- Better window navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
 keymap("n", "<C-j>", "<C-w>j", opts)
 keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
-keymap("n", "p", "p=`]", opts) -- automatically indent correctly on pasting and put cursor after insertet text
-keymap("n", "P", "P=`]", opts) -- automatically indent correctly on pasting and put cursor after insertet text
+keymap("n", "p", "p=`]`]", opts) -- automatically indent correctly on pasting and put cursor after insertet text
+keymap("n", "P", "P=`]`]", opts) -- automatically indent correctly on pasting and put cursor after insertet text
 -- keymap("n", "p", "]p`]l", opts) -- automatically indent correctly on pasting and put cursor after insertet text
 -- keymap("n", "P", "]P`]l", opts) -- automatically indent correctly on pasting and put cursor after insertet text
 -- keymap("n", "p", "]p", opts) -- automatically indent correctly on pasting and put cursor after insertet text
 -- keymap("n", "P", "]P", opts) -- automatically indent correctly on pasting and put cursor after insertet text
 
--- keymap("n", "<leader>e", ":Lex 16<cr>", opts)
-keymap("n", "<leader>m", "<cmd>MaximizerToggle!<CR>", opts)
-
 -- This unsets the <last search pattern> register by hitting escape
 keymap("n", "<ESC>", ":noh<CR>", opts)
-
--- keymap("n", "<Leader>q", " <cmd>Bdelete<CR>", {})
 
 -- Resize with arrows
 keymap("n", "<M-Up>", ":resize +2<CR>", opts)
@@ -78,8 +75,8 @@ keymap("v", ">", ">gv", opts)
 -- Move text up and down
 keymap("v", "<A-j>", ":m .+1<CR>==", opts)
 keymap("v", "<A-k>", ":m .-2<CR>==", opts)
--- keymap("v", "p", '"_dP', opts)
--- keymap("v", "y", "myy`y", opts) -- move the cursor back when pasting
+keymap("x", "p", '"_dP', opts)
+keymap("v", "y", "myy`y", opts) -- move the cursor back when pasting
 
 -- Visual Block --
 -- Move text up and down

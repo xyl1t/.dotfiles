@@ -10,3 +10,6 @@ Shaders
 SDL2
 CMake
 c99
+Cidr
+shaders
+OutOfBound

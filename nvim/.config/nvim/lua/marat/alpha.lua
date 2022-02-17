@@ -71,7 +71,7 @@ local function footer()
 	-- thingy:close()
 	-- return "Reject VSCode\t\t\t" .. date
 
-	return "#RejectVSCode"
+	return "#RejectVSCode_ExceptWhenYouHaveToUseADebugger"
 end
 
 dashboard.section.footer.val = footer()

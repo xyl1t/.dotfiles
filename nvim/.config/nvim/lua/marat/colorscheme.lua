@@ -75,6 +75,8 @@ if colorscheme == "gruvbox" then
 	hi pandocEmphasis guifg=#d3869b gui=italic
 	" hi pandocBlockQuote guifg=#d3869b gui=italic
 	" hi pandocNoFormatted guifg=#fb4934
+
+	hi SpellBad gui=none guifg=#fb4934
     ]]
 end
 

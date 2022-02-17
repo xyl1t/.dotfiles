@@ -73,6 +73,14 @@ augroup END
 -- in case you use the vim-highlightedyank plugin
 vim.g.highlightedyank_highlight_duration = 200
 
+-- limit text width to 80 columns on text files
+vim.cmd[[
+augroup my_textwidth
+au!
+autocmd FileType text,markdown,tex setlocal textwidth=80
+augroup END
+]]
+
 -- neovide settings
 vim.g.neovide_cursor_vfx_mode = "pixiedust"
 vim.g.neovide_cursor_vfx_mode = "sonicboom"

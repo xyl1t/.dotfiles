@@ -65,8 +65,8 @@ return packer.startup{function(use)
 	-- colorscheme
 	use "ellisonleao/gruvbox.nvim"
 	-- use "mhdahmad/gruvbox.nvim"
-	use {"sainnhe/sonokai"}
-	use {"lunarVim/colorschemes"}
+	use "sainnhe/sonokai"
+	use "lunarVim/colorschemes"
 	use {"catppuccin/nvim", as = "catppuccin"}
 	-- use "lifepillar/vim-gruvbox8"
 	-- https://github.com/sainnhe/everforest

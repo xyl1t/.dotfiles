@@ -23,18 +23,15 @@ telescope.setup {
 			preview = { "─", "│", "─", "│", '┌', '┐', '┘', '└' },
 		},
 
-		results_title = '',
-		preview_title = '',
-
 		mappings = {
 			i = {
-				["<C-j>"]  = actions.cycle_history_next,
-				["<C-k>"]  = actions.cycle_history_prev,
+				["<C-n>"]  = actions.cycle_history_next,
+				["<C-p>"]  = actions.cycle_history_prev,
 				["<Down>"] = actions.move_selection_next,
 				["<Up>"]   = actions.move_selection_previous,
 
-				["<C-n>"] = actions.move_selection_next,
-				["<C-p>"] = actions.move_selection_previous,
+				["<C-j>"] = actions.move_selection_next,
+				["<C-k>"] = actions.move_selection_previous,
 
 				["<C-c>"] = actions.close,
 				["<esc>"] = actions.close,
@@ -133,6 +130,10 @@ M.get_custom_dropdown = function(opt)
 
 		sorting_strategy = "ascending",
 		layout_strategy = "vertical",
+
+		-- prompt_title = "",
+		results_title = "",
+		preview_title = "",
 
 		layout_config = {
 			mirror = true,

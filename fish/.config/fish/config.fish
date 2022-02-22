@@ -12,8 +12,10 @@ case Darwin
 	alias code 'open -a "Visual Studio Code"'
 	alias subl 'open -a "Sublime Text"'
 	alias aplay "mplayer -cache 1024 -quiet -rawaudio samplesize=1:channels=1:rate=8000 -demuxer rawaudio -"
+	alias find gfind
 end
 
+alias src_fconf "source ~/.config/fish/config.fish"
 alias vim "nvim"
 alias ls 'exa -lF --color=always --group-directories-first'
 alias ll 'exa -alF --color=always --group-directories-first'
@@ -34,6 +36,7 @@ alias fconf "vim -c ':cd ~/.config/fish' -c ':e config.fish'"
 alias e nvim
 alias lg lazygit
 alias ncdu "ncdu --color dark"
+alias youtube-dl-audio "youtube-dl --extract-audio --audio-format mp3"
 
 switch (uname)
 case Darwin

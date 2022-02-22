@@ -70,6 +70,7 @@ autocmd!
 au TextYankPost * silent! lua vim.highlight.on_yank({higroup="Visual", timeout=200})
 augroup END
 ]]
+
 -- in case you use the vim-highlightedyank plugin
 vim.g.highlightedyank_highlight_duration = 200
 

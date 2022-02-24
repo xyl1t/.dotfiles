@@ -92,5 +92,10 @@ hi DiagnosticSignHint  ctermfg=green  ctermbg=NONE guifg=#b8bb26 guibg=NONE
 hi LspReferenceText gui=none
 hi LspReferenceRead gui=none
 hi LspReferenceWrite gui=none
+
+" https://www.reddit.com/r/neovim/comments/sucjll/colorscheme_tip_highlight_special_characters
+" hi SpecialKey guifg=#61AFEF
+hi SpecialKeyWin guifg=#3B4048
+set winhighlight=SpecialKey:SpecialKeyWin
 ]]
 

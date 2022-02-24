@@ -6,8 +6,10 @@ set nocompatible
 """"""""""""""""""""""""""""
 set splitright
 set splitbelow
-set clipboard=unnamedplus
-set tgc
+set clipboard=unnamed
+if (has("termguicolors"))
+	set termguicolors " true color
+endif
 set nowrap
 set ttimeoutlen=5
 " Let's save undo info!
@@ -19,6 +21,8 @@ if !isdirectory($HOME."/.vim/undo-dir")
 endif
 set undodir=~/.vim/undo-dir
 set undofile
+set cursorline
+set cursorlineopt=number
 """"""""""""""""""""""""""""
 
 " activate line numbers
@@ -50,10 +54,11 @@ set listchars=tab:\ \ ,nbsp:␣,trail:·,extends:⟩,precedes:⟨
 set laststatus=0
 set icon
 
-" center the cursor always on the screen
+" center the cursor always on the screen - no
 set scrolloff=8
+set sidescrolloff=4
 
-" highlight search hits,  \+<cr> to clear 
+" highlight search hits,  \+<cr> to clear
 set hlsearch
 set incsearch
 set linebreak
@@ -128,20 +133,22 @@ set background=dark
 
 " only load plugins if Plug detected
 if filereadable(expand("~/.vim/autoload/plug.vim"))
-  call plug#begin('~/.vimplugins')
-  Plug 'vim-pandoc/vim-pandoc'
-  Plug 'https://gitlab.com/rwxrob/vim-pandoc-syntax-simple'
-  " Plug 'cespare/vim-toml'
-  " Plug 'fatih/vim-go'
-  " Plug 'airblade/vim-gitgutter'
-  " Plug 'PProvost/vim-ps1'
-  Plug 'morhetz/gruvbox'
-  call plug#end()
-  "set background=dark
-  colorscheme gruvbox
-  hi Normal guibg=NONE ctermbg=NONE
+	call plug#begin('~/.vim/plugged')
+	Plug 'vim-pandoc/vim-pandoc'
+	Plug 'https://gitlab.com/rwxrob/vim-pandoc-syntax-simple'
+	Plug 'christoomey/vim-tmux-navigator'
+	" Plug 'cespare/vim-toml'
+	" Plug 'fatih/vim-go'
+	" Plug 'airblade/vim-gitgutter'
+	" Plug 'PProvost/vim-ps1'
+	" Plug 'morhetz/gruvbox'
+	call plug#end()
+	"set background=dark
+	colorscheme gruvbox
+	hi Normal guibg=NONE ctermbg=NONE
+	hi Visual ctermbg=242 guibg=#665c54 term=NONE cterm=NONE gui=NONE
 else
-  " autocmd vimleavepre *.go !gofmt -w % " backup if fatih fails
+	" autocmd vimleavepre *.go !gofmt -w % " backup if fatih fails
 endif
 
 " fill in empty markdown links with duck.com search
@@ -180,10 +187,13 @@ map <C-l> <C-W>l
 map <F1> :set number!<CR> :set relativenumber!<CR>
 nmap <F2> :call <SID>SynStack()<CR>
 set pastetoggle=<F3>
-map <F4> :set list!<CR>
 map <F5> :set cursorline!<CR>
 map <F7> :set spell!<CR>
 map <F12> :set fdm=indent<CR>
+
+let mapleader=" "
+
+map <leader>h :noh<CR>
 
 " read personal/private vim configuration (keep last to override)
 set rtp^=~/.vimpersonal

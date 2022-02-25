@@ -4,3 +4,8 @@ nvim/.config/nvim/lua/packer_compiled.lua
 tmux/.tmux/resurrect/
 yabai/.config/yabai
 vifm/.config/vifm/vifminfo.json
+vim/.vim/undo-dir
+
+vim/.vim/.netrwhist
+
+vim/.vim/.netrwhist

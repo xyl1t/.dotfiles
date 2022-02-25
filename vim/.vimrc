@@ -4,9 +4,11 @@ let skip_defaults_vim=1
 set nocompatible
 
 """"""""""""""""""""""""""""
+" set leader to space
+let mapleader=" "
 set splitright
 set splitbelow
-set clipboard=unnamed
+set clipboard=unnamedplus
 if (has("termguicolors"))
 	set termguicolors " true color
 endif
@@ -23,6 +25,11 @@ set undodir=~/.vim/undo-dir
 set undofile
 set cursorline
 set cursorlineopt=number
+set belloff=all
+" disable netrw banner
+let g:netrw_banner=0
+" display netrw as tree
+let g:netrw_liststyle=3
 """"""""""""""""""""""""""""
 
 " activate line numbers
@@ -171,7 +178,7 @@ function! <SID>SynStack()
 	if !exists("*synstack")
 		return
 	endif
-  echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
+	echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
 endfunc  
 
 " start at last place you were editing
@@ -191,9 +198,11 @@ map <F5> :set cursorline!<CR>
 map <F7> :set spell!<CR>
 map <F12> :set fdm=indent<CR>
 
-let mapleader=" "
-
-map <leader>h :noh<CR>
+" center screen on scroll
+map <c-d> <c-d>zz
+map <c-u> <c-u>zz
+map <c-f> <c-f>zz
+map <c-b> <c-b>zz
 
 " read personal/private vim configuration (keep last to override)
 set rtp^=~/.vimpersonal

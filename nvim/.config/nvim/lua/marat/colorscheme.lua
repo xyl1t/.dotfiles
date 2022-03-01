@@ -1,4 +1,4 @@
-vim.g.transparent_background = false
+vim.g.transparent_background = true
 
 -- gruvbox settings
 vim.g.gruvbox_italicize_comments = false

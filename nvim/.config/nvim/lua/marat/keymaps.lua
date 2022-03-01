@@ -34,6 +34,8 @@ keymap("v", "-", "<C-x>", opts)
 
 keymap("n", "M", "<cmd>Man<CR>", opts)
 
+keymap("n", "<F2>", '<cmd>echo synIDattr(synID(line("."), col("."), 1), "name")<CR>', opts);
+
 -- Better window navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
 keymap("n", "<C-j>", "<C-w>j", opts)

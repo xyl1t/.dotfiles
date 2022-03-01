@@ -1,4 +1,4 @@
-vim.g.transparent_background = true
+vim.g.transparent_background = false
 
 -- gruvbox settings
 vim.g.gruvbox_italicize_comments = false
@@ -18,6 +18,7 @@ spacedark
 system76
 tomorrow
 gruvbox
+catppuccin
 ]]
 
 vim.o.background = "dark"
@@ -43,8 +44,8 @@ if colorscheme == "gruvbox" then
 		hi GitSignsDelete guibg=#322302f
 		hi GitSignsChange guifg=#fe8019 guibg=#322302f
 
-		hi TabLine guifg=#7c6f64 guibg=#282828 cterm=underline ctermfg=15 ctermbg=242
-		hi TabLineFill guifg=#7c6f64 guibg=#1d2021 cterm=reverse
+		" hi TabLine guifg=#7c6f64 guibg=#282828 cterm=underline ctermfg=15 ctermbg=242
+		" hi TabLineFill guifg=#7c6f64 guibg=#1d2021 cterm=reverse
 	]]
 	end
 

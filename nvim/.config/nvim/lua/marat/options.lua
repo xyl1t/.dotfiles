@@ -78,7 +78,7 @@ vim.g.highlightedyank_highlight_duration = 200
 vim.cmd[[
 augroup my_textwidth
 au!
-autocmd FileType text,markdown,tex setlocal textwidth=80
+autocmd FileType text,markdown,tex setlocal textwidth=79
 augroup END
 ]]
 

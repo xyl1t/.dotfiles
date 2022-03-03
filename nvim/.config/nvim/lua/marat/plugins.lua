@@ -48,9 +48,11 @@ return packer.startup{function(use)
 
 	-- use "ThePrimeagen/vim-be-good"
 
+	use "nvim-neorg/neorg"
+
 	-- visual sugar
 	use "ap/vim-css-color"                           -- a very fast, multi-syntax context-sensitive color name highlighter alternative: https://github.com/norcalli/nvim-colorizer.lua
-	use {"junegunn/goyo.vim", cmd = "Goyo"}          -- Distraction-free writing in Vim.
+	-- use {"junegunn/goyo.vim", cmd = "Goyo"}          -- Distraction-free writing in Vim.
 	use "kyazdani42/nvim-web-devicons"               -- icons
 	use "psliwka/vim-smoothie"                       -- smooth scrolling
 	use "folke/which-key.nvim"                       -- shows which keys are available
@@ -64,6 +66,7 @@ return packer.startup{function(use)
 
 	-- colorscheme
 	use "ellisonleao/gruvbox.nvim"
+	use "rebelot/kanagawa.nvim"
 	-- use "mhdahmad/gruvbox.nvim"
 	use "sainnhe/sonokai"
 	use "lunarVim/colorschemes"

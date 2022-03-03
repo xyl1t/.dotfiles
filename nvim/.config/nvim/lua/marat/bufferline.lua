@@ -174,74 +174,130 @@ bufferline.setup {
 			guibg = { attribute = "bg", highlight = "Normal" },
 		},
 
-		-------------------------------
+		-----------------------------------------------------------------------
 
 		error = {
 			guifg = { attribute = "fg", highlight = "DiagnosticError" },
 			guibg = { attribute = "bg", highlight = "TabLine" },
+			gui='none'
+		},
+		error_selected = {
+			guifg = { attribute = "fg", highlight = "DiagnosticError" },
+			guibg = { attribute = "bg", highlight = "Normal" },
+			gui='none'
+		},
+		error_diagnostic_selected = {
+			guifg = { attribute = "fg", highlight = "DiagnosticError" },
+			guibg = { attribute = "bg", highlight = "Normal" },
+			gui='none'
 		},
 		error_diagnostic = {
 			guifg = { attribute = "fg", highlight = "DiagnosticError" },
 			guibg = { attribute = "bg", highlight = "TabLine" },
+			gui='none'
 		},
 		error_visible = {
 			guifg = { attribute = 'fg', highlight = 'DiagnosticError' },
 			guibg = { attribute = 'bg', highlight = 'TabLine' },
+			gui='none'
 		},
 		error_diagnostic_visible = {
 			guifg = { attribute = 'fg', highlight = 'DiagnosticError' },
 			guibg = { attribute = 'bg', highlight = 'TabLine' },
+			gui='none'
 		},
 
 		warning = {
 			guifg = { attribute = "fg", highlight = "DiagnosticWarn" },
 			guibg = { attribute = "bg", highlight = "TabLine" },
+			gui='none'
 		},
 		warning_diagnostic = {
 			guifg = { attribute = "fg", highlight = "DiagnosticWarn" },
 			guibg = { attribute = "bg", highlight = "TabLine" },
+			gui='none'
+		},
+		warning_selected = {
+			guifg = { attribute = "fg", highlight = "DiagnosticWarn" },
+			guibg = { attribute = "bg", highlight = "Normal" },
+			gui='none'
+		},
+		warning_diagnostic_selected = {
+			guifg = { attribute = "fg", highlight = "DiagnosticWarn" },
+			guibg = { attribute = "bg", highlight = "Normal" },
+			gui='none'
 		},
 		warning_visible = {
 			guifg = { attribute = 'fg', highlight = 'DiagnosticWarn' },
 			guibg = { attribute = 'bg', highlight = 'TabLine' },
+			gui='none'
 		},
 		warning_diagnostic_visible = {
 			guifg = { attribute = 'fg', highlight = 'DiagnosticWarn' },
 			guibg = { attribute = 'bg', highlight = 'TabLine' },
+			gui='none'
 		},
 
 		info = {
 			guifg = { attribute = "fg", highlight = "DiagnosticInfo" },
 			guibg = { attribute = "bg", highlight = "TabLine" },
+			gui='none'
 		},
 		info_diagnostic = {
 			guifg = { attribute = "fg", highlight = "DiagnosticInfo" },
 			guibg = { attribute = "bg", highlight = "TabLine" },
+			gui='none'
+		},
+		info_selected = {
+			guifg = { attribute = "fg", highlight = "DiagnosticInfo" },
+			guibg = { attribute = "bg", highlight = "Normal" },
+			gui='none'
+		},
+		info_diagnostic_selected = {
+			guifg = { attribute = "fg", highlight = "DiagnosticInfo" },
+			guibg = { attribute = "bg", highlight = "Normal" },
+			gui='none'
 		},
 		info_visible = {
 			guifg = { attribute = 'fg', highlight = 'DiagnosticInfo' },
 			guibg = { attribute = 'bg', highlight = 'TabLine' },
+			gui='none'
 		},
 		info_diagnostic_visible = {
 			guifg = { attribute = 'fg', highlight = 'DiagnosticInfo' },
 			guibg = { attribute = 'bg', highlight = 'TabLine' },
+			gui='none'
 		},
 
 		hint = {
 			guifg = { attribute = "fg", highlight = "DiagnosticHint" },
 			guibg = { attribute = "bg", highlight = "TabLine" },
+			gui='none'
 		},
 		hint_diagnostic = {
 			guifg = { attribute = "fg", highlight = "DiagnosticHint" },
 			guibg = { attribute = "bg", highlight = "TabLine" },
+			gui='none'
+		},
+		hint_selected = {
+			guifg = { attribute = "fg", highlight = "DiagnosticHint" },
+			guibg = { attribute = "bg", highlight = "Normal" },
+			gui='none'
+		},
+		hint_diagnostic_selected = {
+			guifg = { attribute = "fg", highlight = "DiagnosticHint" },
+			guibg = { attribute = "bg", highlight = "Normal" },
+			gui='none'
 		},
 		hint_visible = {
 			guifg = { attribute = 'fg', highlight = 'DiagnosticHint' },
 			guibg = { attribute = 'bg', highlight = 'TabLine' },
+			gui='none'
 		},
 		hint_diagnostic_visible = {
 			guifg = { attribute = 'fg', highlight = 'DiagnosticHint' },
 			guibg = { attribute = 'bg', highlight = 'TabLine' },
+			gui='none'
 		},
 
 	},

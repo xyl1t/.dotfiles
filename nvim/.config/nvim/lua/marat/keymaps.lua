@@ -50,6 +50,7 @@ keymap("n", "P", "P=`]`]", opts) -- automatically indent correctly on pasting an
 
 -- This unsets the <last search pattern> register by hitting escape
 keymap("n", "<ESC>", ":noh<CR>", opts)
+keymap("n", "<leader><CR>", ":noh<CR>", opts)
 
 -- Resize with arrows
 keymap("n", "<M-Up>", ":resize +2<CR>", opts)

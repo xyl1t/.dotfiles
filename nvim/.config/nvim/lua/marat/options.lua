@@ -5,7 +5,7 @@
 vim.opt.backup = false             -- creates a backup file
 vim.opt.clipboard = "unnamedplus"  -- allows neovim to access the system clipboard
 vim.opt.cmdheight = 1              -- do not waste space!! ~~more space in the neovim command line for displaying messages~~
-vim.opt.completeopt = { "menuone", "noselect" } -- mostly just for cmp
+-- vim.opt.completeopt = { "menuone", "noselect" } -- mostly just for cmp
 vim.opt.conceallevel = 0           -- so that `` is visible in markdown files
 vim.opt.fileencoding = "utf-8"     -- the encoding written to a file
 vim.opt.hlsearch = true            -- highlight all matches on previous search pattern
@@ -41,7 +41,7 @@ vim.opt.wrap = false               -- display lines as one long line
 vim.opt.scrolloff = 4              -- is one of my fav
 vim.opt.sidescrolloff = 8
 -- vim.opt.guifont = "Cousine Nerd Font Mono" -- the font used in graphical neovim applications
-vim.opt.guifont = "LiterationMono Nerd Font:h14" -- the font used in graphical neovim applications
+vim.opt.guifont = "CozetteVector:h12" -- the font used in graphical neovim applications
 vim.opt.list = true
 vim.opt.listchars = {tab = '  ', extends = '>', precedes = '<', nbsp = '␣', trail = '·'}
 vim.opt.pumheight=16

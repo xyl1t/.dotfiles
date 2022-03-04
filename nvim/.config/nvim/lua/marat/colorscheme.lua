@@ -19,12 +19,20 @@ system76
 tomorrow
 gruvbox
 catppuccin
+kanagawa
 ]]
 
 vim.o.background = "dark"
 local colorscheme = "gruvbox"
 
 vim.cmd("colorscheme " .. colorscheme)
+
+if colorscheme == "kanagawa" then
+	vim.cmd[[
+	" hi TabLine guifg=#7c6f64 guibg=#282828 cterm=underline ctermfg=15 ctermbg=242
+	" hi TabLineFill guifg=#7c6f64 guibg=#1d2021 cterm=reverse
+	]]
+end
 
 if colorscheme == "gruvbox" then
 	if vim.g.transparent_background then

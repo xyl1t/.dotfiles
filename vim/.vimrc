@@ -6,14 +6,27 @@ set nocompatible
 """"""""""""""""""""""""""""
 " set leader to space
 let mapleader=" "
+
 set splitright
 set splitbelow
-set clipboard=unnamedplus
-if (has("termguicolors"))
-	set termguicolors " true color
-endif
+
+" set clipboard=unnamedplus
+
+" if (has("termguicolors"))
+" 	set termguicolors " true color
+" endif
+
 set nowrap
 set ttimeoutlen=5
+set cursorline
+set cursorlineopt=number
+set belloff=all
+
+" disable netrw banner
+let g:netrw_banner=0
+" display netrw as tree
+let g:netrw_liststyle=3
+
 " Let's save undo info!
 if !isdirectory($HOME."/.vim")
     call mkdir($HOME."/.vim", "", 0770)
@@ -23,19 +36,10 @@ if !isdirectory($HOME."/.vim/undo-dir")
 endif
 set undodir=~/.vim/undo-dir
 set undofile
-set cursorline
-set cursorlineopt=number
-set belloff=all
-" disable netrw banner
-let g:netrw_banner=0
-" display netrw as tree
-let g:netrw_liststyle=3
 """"""""""""""""""""""""""""
 
-" activate line numbers
+" activate cool line numbers
 set number
-
-" disable relative line numbers, remove no to sample it
 set relativenumber
 
 " turn info in tray on even if default
@@ -102,7 +106,7 @@ set formatoptions-=b   " don't use broken 'vi-compatible auto-wrapping'
 set formatoptions+=l   " long lines not broken in insert mode
 set formatoptions+=m   " multi-byte character line break support
 set formatoptions+=M   " don't add space before or after multi-byte char
-set formatoptions-=B   " don't add space between two multi-byte chars in join 
+set formatoptions-=B   " don't add space between two multi-byte chars in join
 set formatoptions+=1   " don't break a line after a one-letter word
 
 " requires PLATFORM env variable set (in ~/.bashrc)
@@ -136,14 +140,14 @@ endif
 
 " high contrast for streaming, etc.
 set background=dark
-" colorscheme elflord
+colorscheme industry
 
 " only load plugins if Plug detected
 if filereadable(expand("~/.vim/autoload/plug.vim"))
 	call plug#begin('~/.vim/plugged')
 	Plug 'vim-pandoc/vim-pandoc'
 	Plug 'https://gitlab.com/rwxrob/vim-pandoc-syntax-simple'
-	Plug 'christoomey/vim-tmux-navigator'
+	" Plug 'christoomey/vim-tmux-navigator'
 	" Plug 'cespare/vim-toml'
 	" Plug 'fatih/vim-go'
 	" Plug 'airblade/vim-gitgutter'
@@ -159,7 +163,7 @@ else
 endif
 
 " fill in empty markdown links with duck.com search
-autocmd vimleavepre *.md !perl -p -i -e 's,\[([^\]]+?)\]\(\),[\1](https://duck.com/lite?kae=t&q=\1),g' %
+" autocmd vimleavepre *.md !perl -p -i -e 's,\[([^\]]+?)\]\(\),[\1](https://duck.com/lite?kae=t&q=\1),g' %
 
 " enable omni-completion
 set omnifunc=syntaxcomplete#Complete
@@ -179,7 +183,7 @@ function! <SID>SynStack()
 		return
 	endif
 	echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
-endfunc  
+endfunc
 
 " start at last place you were editing
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
@@ -192,10 +196,14 @@ map <C-l> <C-W>l
 
 " functions keys
 map <F1> :set number!<CR> :set relativenumber!<CR>
-nmap <F2> :call <SID>SynStack()<CR>
+" nmap <F2> :call <SID>SynStack()<CR>
+nmap <F2> :echo synIDattr(synID(line("."), col("."), 1), "name")<CR>
 set pastetoggle=<F3>
+map <F4> :s/\s\+$//<CR>
 map <F5> :set cursorline!<CR>
 map <F7> :set spell!<CR>
+map <F8> :set keymap=russian-jcukenwin<CR>:set spelllang=ru<CR>
+map <F9> :set keymap=<CR>:set spelllang=en<CR>
 map <F12> :set fdm=indent<CR>
 
 " center screen on scroll

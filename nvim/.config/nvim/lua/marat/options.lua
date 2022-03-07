@@ -41,7 +41,7 @@ vim.opt.wrap = false               -- display lines as one long line
 vim.opt.scrolloff = 4              -- is one of my fav
 vim.opt.sidescrolloff = 8
 -- vim.opt.guifont = "Cousine Nerd Font Mono" -- the font used in graphical neovim applications
-vim.opt.guifont = "CozetteVector:h9" -- the font used in graphical neovim applications
+vim.opt.guifont = "CozetteVector:h12" -- the font used in graphical neovim applications
 vim.opt.list = true
 vim.opt.listchars = {tab = '  ', extends = '>', precedes = '<', nbsp = '␣', trail = '·'}
 vim.opt.pumheight=16

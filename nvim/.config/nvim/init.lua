@@ -11,7 +11,6 @@ require "marat.comment"
 require "marat.lualine"
 require "marat.nvim-tree"
 require "marat.lightspeed"
--- require "marat.hop-plugin"
 require "marat.quick-scope"
 require "marat.dressing"
 require "marat.gitsigns"
@@ -23,6 +22,7 @@ require "marat.alpha"
 require "marat.autopairs"
 require "marat.which-key"
 require "marat.pandoc"
+require "marat.neorg-plugin"
 
 -- vim.cmd[[let b:lexima_disabled=1]]
 

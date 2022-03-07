@@ -15,8 +15,12 @@ dressing.setup({
 		-- These are passed to nvim_open_win
 		anchor = "NW",
 		relative = "cursor",
-		row = -1,
-		col = -1,
+
+		override = function(conf)
+			conf.row = -1
+			conf.col = -1
+			return conf
+		end,
 		border = "single",
 
 		-- These can be integers or a float between 0 and 1 (e.g. 0.4 for 40%)
@@ -74,8 +78,11 @@ dressing.setup({
 			-- These are passed to nvim_open_win
 			anchor = "NW",
 			relative = "cursor",
-			row = 1,
-			col = -1,
+			override = function(conf)
+				conf.row = 1
+				conf.col = -1
+				return conf
+			end,
 			border = "single",
 
 			-- Window transparency (0-100)

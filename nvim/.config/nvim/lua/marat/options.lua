@@ -91,3 +91,5 @@ vim.g.neovide_cursor_animation_length=0.05
 
 vim.g.highlightedyank_highlight_duration = 200
 
+vim.cmd[[set makeprg=make\ -C\ ../build\ -j8]]
+

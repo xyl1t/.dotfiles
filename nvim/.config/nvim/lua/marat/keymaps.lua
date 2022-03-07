@@ -62,6 +62,9 @@ keymap("n", "<M-Right>", ":vertical resize +2<CR>", opts)
 --keymap("n", "<S-l>", ":bnext<CR>", opts)
 --keymap("n", "<S-h>", ":bprevious<CR>", opts)
 
+keymap("", "<F4>", "<cmd>make!<CR>", opts)
+keymap("", "<F5>", "<cmd>wa<CR><cmd>make!<CR>", opts)
+
 -- Insert --
 -- Undo break points
 keymap("i", ",", ",<c-g>u", opts)

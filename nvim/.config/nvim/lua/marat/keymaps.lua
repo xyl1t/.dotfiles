@@ -25,24 +25,22 @@ vim.g.maplocalleader = " "
 ]]
 
 -- Normal --
-keymap("n", "+", "<C-a>", opts)
-keymap("n", "-", "<C-x>", opts)
-keymap("x", "+", "<C-a>", opts)
-keymap("x", "-", "<C-x>", opts)
-keymap("v", "+", "<C-a>", opts)
-keymap("v", "-", "<C-x>", opts)
+keymap("", "+", "<C-a>", opts)
+keymap("", "-", "<C-x>", opts)
 
 keymap("n", "M", "<cmd>Man<CR>", opts)
 
 keymap("n", "<F2>", '<cmd>echo synIDattr(synID(line("."), col("."), 1), "name")<CR>', opts);
+
+keymap("", "<F4>", "<cmd>make!<cr>", opts)
 
 -- Better window navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
 keymap("n", "<C-j>", "<C-w>j", opts)
 keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
-keymap("n", "p", "p=`]`]", opts) -- automatically indent correctly on pasting and put cursor after insertet text
-keymap("n", "P", "P=`]`]", opts) -- automatically indent correctly on pasting and put cursor after insertet text
+-- keymap("n", "p", "p=`]`]", opts) -- automatically indent correctly on pasting and put cursor after insertet text
+-- keymap("n", "P", "P=`]`]", opts) -- automatically indent correctly on pasting and put cursor after insertet text
 -- keymap("n", "p", "]p`]l", opts) -- automatically indent correctly on pasting and put cursor after insertet text
 -- keymap("n", "P", "]P`]l", opts) -- automatically indent correctly on pasting and put cursor after insertet text
 -- keymap("n", "p", "]p", opts) -- automatically indent correctly on pasting and put cursor after insertet text
@@ -79,7 +77,7 @@ keymap("v", ">", ">gv", opts)
 keymap("v", "<A-j>", ":m .+1<CR>==", opts)
 keymap("v", "<A-k>", ":m .-2<CR>==", opts)
 keymap("x", "p", '"_dP', opts)
-keymap("v", "y", "myy`y", opts) -- move the cursor back when pasting
+-- keymap("v", "y", "myy`y", opts) -- move the cursor back when pasting
 
 -- Visual Block --
 -- Move text up and down

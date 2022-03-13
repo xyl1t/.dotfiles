@@ -85,7 +85,8 @@ augroup END
 
 -- neovide settings
 vim.g.neovide_cursor_vfx_mode = "pixiedust"
-vim.g.neovide_cursor_vfx_mode = "sonicboom"
+vim.g.neovide_cursor_vfx_particle_density=10.0
+vim.g.neovide_cursor_vfx_particle_lifetime=1.2
 vim.g.neovide_cursor_trail_length = 0.05
 vim.g.neovide_cursor_animation_length=0.05
 

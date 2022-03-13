@@ -32,8 +32,6 @@ keymap("n", "M", "<cmd>Man<CR>", opts)
 
 keymap("n", "<F2>", '<cmd>echo synIDattr(synID(line("."), col("."), 1), "name")<CR>', opts);
 
-keymap("", "<F4>", "<cmd>make!<cr>", opts)
-
 -- Better window navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
 keymap("n", "<C-j>", "<C-w>j", opts)
@@ -60,8 +58,8 @@ keymap("n", "<M-Right>", ":vertical resize +2<CR>", opts)
 --keymap("n", "<S-l>", ":bnext<CR>", opts)
 --keymap("n", "<S-h>", ":bprevious<CR>", opts)
 
-keymap("", "<F4>", "<cmd>make!<CR>", opts)
-keymap("", "<F5>", "<cmd>wa<CR><cmd>make!<CR>", opts)
+keymap("", "<F4>", "<cmd>wa<CR><cmd>make!<CR>", opts)
+keymap("", "<F5>", "<cmd>make!<CR>", opts)
 
 -- Insert --
 -- Undo break points

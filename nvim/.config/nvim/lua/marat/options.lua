@@ -41,7 +41,7 @@ vim.opt.wrap = false               -- display lines as one long line
 vim.opt.scrolloff = 8              -- is one of my fav
 vim.opt.sidescrolloff = 16
 -- vim.opt.guifont = "Cousine Nerd Font Mono" -- the font used in graphical neovim applications
-vim.opt.guifont = "CozetteVector:h12" -- the font used in graphical neovim applications
+vim.opt.guifont = "CozetteVector:h9" -- the font used in graphical neovim applications
 vim.opt.list = true
 vim.opt.listchars = {tab = '  ', extends = '>', precedes = '<', nbsp = '␣', trail = '·'}
 vim.opt.pumheight=16
@@ -85,7 +85,7 @@ augroup END
 
 -- neovide settings
 vim.g.neovide_cursor_vfx_mode = "pixiedust"
-vim.g.neovide_cursor_vfx_particle_density=10.0
+vim.g.neovide_cursor_vfx_particle_density=25.0
 vim.g.neovide_cursor_vfx_particle_lifetime=1.2
 vim.g.neovide_cursor_trail_length = 0.05
 vim.g.neovide_cursor_animation_length=0.05

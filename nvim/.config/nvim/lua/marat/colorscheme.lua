@@ -94,7 +94,10 @@ vim.cmd [[
 " hi link NvimTreeVertSplit TabLine
 " hi link NvimTreeEndOfBuffer TabLine
 
-hi DiagnosticUnderlineError guifg=Red guisp=Red gui=undercurl
+hi DiagnosticUnderlineError gui=underline
+hi DiagnosticUnderlineWarn gui=underline
+hi DiagnosticUnderlineHint gui=underline
+hi DiagnosticUnderlineInfo gui=underline
 hi DiagnosticSignError ctermfg=red    ctermbg=NONE guifg=#cc241d guibg=NONE
 hi DiagnosticSignWarn  ctermfg=yellow ctermbg=NONE guifg=#fabd2f guibg=NONE
 hi DiagnosticSignHint  ctermfg=green  ctermbg=NONE guifg=#b8bb26 guibg=NONE

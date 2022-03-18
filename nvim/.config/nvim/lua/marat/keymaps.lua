@@ -28,7 +28,7 @@ vim.g.maplocalleader = " "
 keymap("", "+", "<C-a>", opts)
 keymap("", "-", "<C-x>", opts)
 
-keymap("n", "M", "<cmd>Man<CR>", opts)
+keymap("n", "<leader>M", "<cmd>Man<CR>", opts)
 
 keymap("n", "<F2>", '<cmd>echo synIDattr(synID(line("."), col("."), 1), "name")<CR>', opts);
 

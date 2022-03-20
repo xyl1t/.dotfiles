@@ -23,7 +23,7 @@ kanagawa
 ]]
 
 vim.o.background = "dark"
-local colorscheme = "sonokai"
+local colorscheme = "gruvbox"
 
 vim.cmd("colorscheme " .. colorscheme)
 
@@ -73,7 +73,7 @@ if colorscheme == "gruvbox" then
 
 	hi TabLineSel guifg=#fabd2f guibg=#3c3836 cterm=bold
 
-	" hi Conceal guifg=#fabd2f
+	hi Conceal guifg=#a89984
 
 	hi Comment guifg=#a89984
 

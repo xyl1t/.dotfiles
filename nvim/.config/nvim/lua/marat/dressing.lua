@@ -41,11 +41,7 @@ dressing.setup({
 		backend = { "nui", "builtin", "telescope", "fzf", },
 
 		-- Options for telescope selector
-		telescope = {
-			-- can be 'dropdown', 'cursor', or 'ivy'
-			theme = "cursor",
-
-		},
+		telescope = require('telescope.themes').get_cursor(),
 
 		-- Options for fzf selector
 		fzf = {

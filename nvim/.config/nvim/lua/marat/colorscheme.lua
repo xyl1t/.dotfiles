@@ -23,7 +23,7 @@ kanagawa
 ]]
 
 vim.o.background = "dark"
-local colorscheme = "gruvbox"
+local colorscheme = "sonokai"
 
 vim.cmd("colorscheme " .. colorscheme)
 
@@ -87,10 +87,28 @@ if colorscheme == "gruvbox" then
 
 	hi SpellBad gui=none guifg=#fb4934
     ]]
+elseif colorscheme == "sonokai" then
+	vim.cmd[[
+	hi! link TabLineFill BufferVisible
+	hi! link TabLineSel Normal
+	hi! link TabLine TabLineFill
+
+	hi! link NvimTreeNormal TabLineFill
+	hi! link NvimTreeEndOfBuffer TabLineFill
+
+	" hi! link NvimTreeVertSplit Normal
+	" hi NvimTreeVertSplit guifg=none
+
+	hi! link StatusLine NvimTreeNormal
+	hi! link StatusLineNC NvimTreeCursorLine
+	hi! link StatusLineSeparator NvimTreeNormal
+	hi! link StatusLineTerm NvimTreeNormal
+	hi! link StatusLineTermNC NvimTreeNormal
+	]]
 end
 
 vim.cmd [[
-" hi link NvimTreeNormal TabLine 
+" hi link NvimTreeNormal TabLine
 " hi link NvimTreeVertSplit TabLine
 " hi link NvimTreeEndOfBuffer TabLine
 

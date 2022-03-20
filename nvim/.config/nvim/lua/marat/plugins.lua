@@ -73,6 +73,7 @@ return packer.startup{function(use)
 	use {"catppuccin/nvim", as = "catppuccin"}
 	-- use "lifepillar/vim-gruvbox8"
 	-- https://github.com/sainnhe/everforest
+	use 'navarasu/onedark.nvim'
 
 	-- practical
 	use "tpope/vim-surround"                         -- adds ability to surround text with quotes, brackets etc

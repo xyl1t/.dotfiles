@@ -41,7 +41,7 @@ vim.opt.wrap = false               -- display lines as one long line
 vim.opt.scrolloff = 8              -- is one of my fav
 vim.opt.sidescrolloff = 16
 -- vim.opt.guifont = "Cousine Nerd Font Mono" -- the font used in graphical neovim applications
-vim.opt.guifont = "CozetteVector:h9" -- the font used in graphical neovim applications
+vim.opt.guifont = "CozetteVector:h12" -- the font used in graphical neovim applications
 vim.opt.list = true
 vim.opt.listchars = {tab = '  ', extends = '>', precedes = '<', nbsp = '␣', trail = '·'}
 vim.opt.pumheight=16
@@ -55,9 +55,8 @@ vim.g.do_filetype_lua = true       -- use the new lua implementation of filetype
 
 vim.cmd "set whichwrap+=<,>,[,],h,l"
 -- vim.cmd [[set iskeyword+=-]]
-vim.cmd [[set formatoptions-=cro]] -- TODO: this doesn't seem to work
+vim.cmd[[autocmd BufEnter * setlocal formatoptions-=o]]
 vim.cmd "set fcs=eob:\\ "
-vim.cmd [[autocmd BufNewFile,BufRead * setlocal formatoptions-=co]]
 
 -- highlight 80
 -- vim.cmd [[highlight ColorColumn gui=inverse cterm=inverse]]
@@ -94,4 +93,6 @@ vim.g.neovide_cursor_animation_length=0.05
 vim.g.highlightedyank_highlight_duration = 200
 
 vim.cmd[[set makeprg=make\ -C\ ../build\ -j8]]
+
+vim.cmd[[runtime macros/matchit.vim]]
 

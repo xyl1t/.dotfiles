@@ -137,8 +137,10 @@ keymap("x", "<leader>di", "<Plug>VimspectorBalloonEval", {noremap = false})
 -- Bufferline
 -- These commands will navigate through buffers in order regardless of which mode you are using
 -- e.g. if you change the order of buffers :bnext and :bprevious will not respect the custom ordering
-keymap("n", "L", ":BufferLineCycleNext<CR>", opts)
-keymap("n", "H", ":BufferLineCyclePrev<CR>", opts)
+-- keymap("n", "L", ":BufferLineCycleNext<CR>", opts)
+-- keymap("n", "H", ":BufferLineCyclePrev<CR>", opts)
+keymap("n", "<tab>", ":BufferLineCycleNext<CR>", opts)
+keymap("n", "<s-tab>", ":BufferLineCyclePrev<CR>", opts)
 
 -- These commands will move the current buffer backwards or forwards in the bufferline
 keymap("n", "<leader>L", ":BufferLineMoveNext<CR>", opts)

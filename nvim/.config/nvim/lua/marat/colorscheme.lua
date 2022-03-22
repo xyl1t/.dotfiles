@@ -81,7 +81,7 @@ if colorscheme == "gruvbox" then
 	" hi pandocAtxStart guifg=#fabd2f gui=NONE
 	hi pandocListItemBullet guifg=#fabd2f gui=NONE
 	" hi pandocStrong guifg=#8ec07c gui=bold
-	hi pandocEmphasis guifg=#d3869b gui=italic
+	hi pandocEmphasis guifg=#d3869b gui=NONE
 	" hi pandocBlockQuote guifg=#d3869b gui=italic
 	" hi pandocNoFormatted guifg=#fb4934
 

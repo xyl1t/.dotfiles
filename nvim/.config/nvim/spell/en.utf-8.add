@@ -23,5 +23,10 @@ Isaw
 configs
 config
 unstaged
+<<<<<<< HEAD
 #nclusivity
 inclusivity
+=======
+Filesystem
+Hierarchy
+>>>>>>> 8a330f48e2a4ea91abe7e93ceb4549be64207e28

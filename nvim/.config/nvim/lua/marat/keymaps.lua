@@ -30,6 +30,9 @@ keymap("", "-", "<C-x>", opts)
 
 keymap("n", "<leader>M", "<cmd>Man<CR>", opts)
 
+-- surround a character with space
+keymap("n", "<leader><leader>", "i la h",  opts)
+
 keymap("n", "<F2>", '<cmd>echo synIDattr(synID(line("."), col("."), 1), "name")<CR>', opts);
 
 -- Better window navigation

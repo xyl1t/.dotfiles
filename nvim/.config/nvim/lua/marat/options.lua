@@ -48,6 +48,7 @@ vim.opt.pumheight=16
 vim.opt.pumblend=16
 vim.opt.shortmess:append "c"
 vim.opt.foldlevelstart=20
+vim.opt.laststatus = 3
 
 vim.g.netrw_banner=0               -- disable netrw banner
 vim.g.netrw_liststyle=3            -- display netrw as tree
@@ -94,5 +95,5 @@ vim.g.highlightedyank_highlight_duration = 200
 
 vim.cmd[[set makeprg=make\ -C\ ../build\ -j8]]
 
-vim.cmd[[runtime macros/matchit.vim]]
+-- vim.cmd[[runtime macros/matchit.vim]]
 

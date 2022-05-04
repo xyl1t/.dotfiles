@@ -63,6 +63,7 @@ return packer.startup{function(use)
 	-- https://github.com/petertriho/nvim-scrollbar -- cool scrollbar that also shows diagnostics
 	-- use "machakann/vim-highlightedyank"
 	-- use {"petertriho/nvim-scrollbar", config=function () require("scrollbar").setup() end}
+	use "powerman/vim-plugin-AnsiEsc"
 
 	-- colorscheme
 	use "ellisonleao/gruvbox.nvim"

@@ -2,7 +2,7 @@ vim.g.transparent_background = true
 
 -- gruvbox settings
 vim.g.gruvbox_italicize_comments = false
-vim.g.gruvbox_invert_selection = false
+-- vim.g.gruvbox_invert_selection = false
 vim.g.gruvbox_contrast_dark = 'soft'
 
 -- Available values: 'default', 'atlantis', 'andromeda', 'shusia', 'maia', 'espresso'
@@ -86,7 +86,11 @@ if colorscheme == "gruvbox" then
 	" hi pandocNoFormatted guifg=#fb4934
 
 	hi SpellBad gui=none guifg=#fb4934
+
+	hi SpecialKey guifg=cyan
+	hi SpcialKeyWin guifg=cyan 
     ]]
+
 elseif colorscheme == "sonokai" then
 	vim.cmd[[
 	hi! link TabLineFill BufferVisible

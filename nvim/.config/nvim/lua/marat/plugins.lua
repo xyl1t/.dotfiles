@@ -93,7 +93,7 @@ return packer.startup{function(use)
 	use "ggandor/lightspeed.nvim" -- the missing vim motion
 	-- use {"phaazon/hop.nvim", branch="v1"}
 	-- use "justinmk/vim-sneak"
-	use "akinsho/toggleterm.nvim"                  -- better terminal
+	use {"akinsho/toggleterm.nvim", tag = 'v1.*'}    -- better terminal
 	use "szw/vim-maximizer"                          -- maximize a window
 	use "puremourning/vimspector"                    -- visual debugger
 	-- use "akinsho/bufferline.nvim"                    -- A buffer line for Neovim made with lua

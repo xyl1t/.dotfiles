@@ -96,7 +96,8 @@ return packer.startup{function(use)
 	use "akinsho/toggleterm.nvim"                  -- better terminal
 	use "szw/vim-maximizer"                          -- maximize a window
 	use "puremourning/vimspector"                    -- visual debugger
-	use "akinsho/bufferline.nvim"                    -- A buffer line for Neovim made with lua
+	-- use "akinsho/bufferline.nvim"                    -- A buffer line for Neovim made with lua
+	use {'akinsho/bufferline.nvim', tag = "v2.*", requires = 'kyazdani42/nvim-web-devicons'}
 	use "moll/vim-bbye"                              -- Better buffer closing
 	use "lewis6991/impatient.nvim"                   -- speed up neovim startup
 	use "goolord/alpha-nvim"                         -- alpha is a fast and fully customizable greeter for neovim
@@ -149,8 +150,19 @@ return packer.startup{function(use)
 	use 'MarcWeber/vim-addon-mw-utils'
 
 	-- LSP
-	use "neovim/nvim-lspconfig"                      -- enable LSP
-	use "williamboman/nvim-lsp-installer"            -- simple to use language server installer
+	use {
+		"williamboman/nvim-lsp-installer",
+		{
+			"neovim/nvim-lspconfig",
+			-- config = function()
+			-- 	require("nvim-lsp-installer").setup {}
+			-- 	local lspconfig = require("lspconfig")
+			-- 	lspconfig.sumneko_lua.setup {}
+			-- end
+		}
+	}
+	-- use "neovim/nvim-lspconfig"                      -- enable LSP
+	-- use "williamboman/nvim-lsp-installer"            -- simple to use language server installer
 	-- use "RishabhRD/popfix"                           -- LSP made user friendly
 	-- use "RishabhRD/nvim-lsputils"                    -- LSP made user friendly
 	-- use "tjdevries/astronauta.nvim"

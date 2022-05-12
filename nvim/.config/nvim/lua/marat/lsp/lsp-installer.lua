@@ -1,16 +1,23 @@
--- local lsp_installer = require("nvim-lsp-installer")
--- lsp_installer.setup {}
---
--- local status_ok, lspconfig = pcall(require, "lspconfig")
--- if not status_ok then
---     return
--- end
---
--- lspconfig.sumneko_lua.setup {}
--- lspconfig.tsserver.setup {}
---
--- -- Register a handler that will be called for all installed servers.
--- -- Alternatively, you may also register handlers on specific server instances instead (see example below).
+local lsp_installer = require("nvim-lsp-installer")
+lsp_installer.setup {}
+
+local status_ok, lspconfig = pcall(require, "lspconfig")
+if not status_ok then
+    return
+end
+
+lspconfig.sumneko_lua.setup{
+	diagnostics = {
+		-- Get the language server to recognize the `vim` global
+		globals = {'vim'},
+}}
+lspconfig.tsserver.setup{}
+lspconfig.clangd.setup{}
+lspconfig.jdtls.setup{}
+lspconfig.cmake.setup{}
+
+-- Register a handler that will be called for all installed servers.
+-- Alternatively, you may also register handlers on specific server instances instead (see example below).
 -- lsp_installer.on_server_ready(function(server)
 -- 	local opts = {
 -- 		on_attach = require("marat.lsp.handlers").on_attach,

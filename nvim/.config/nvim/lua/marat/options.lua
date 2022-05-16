@@ -64,6 +64,8 @@ vim.cmd "set fcs=eob:\\ "
 vim.cmd [[autocmd FileType cpp,c,javascript,java,sql call matchadd('ColorColumn', '\%81v', 100)]]
 vim.cmd [[autocmd FileType cpp,c set makeprg=make\ -C\ ./build\ -j9]]
 
+vim.cmd[[autocmd FileType javascript,css,html,json setlocal shiftwidth=2 softtabstop=2 expandtab]]
+
 -- highlight yanked text for 200ms
 vim.cmd[[
 augroup highlight_yank

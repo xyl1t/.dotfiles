@@ -7,10 +7,15 @@ if not status_ok then
 end
 
 lspconfig.sumneko_lua.setup{
-	diagnostics = {
-		-- Get the language server to recognize the `vim` global
-		globals = {'vim'},
-}}
+	settings = {
+		Lua = {
+			diagnostics = {
+				-- Get the language server to recognize the `vim` global
+				globals = {'vim'},
+			},
+		},
+	}
+}
 lspconfig.tsserver.setup{}
 lspconfig.clangd.setup{}
 lspconfig.jdtls.setup{}

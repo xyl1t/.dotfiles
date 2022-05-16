@@ -20,6 +20,8 @@ lspconfig.tsserver.setup{}
 lspconfig.clangd.setup{}
 lspconfig.jdtls.setup{}
 lspconfig.cmake.setup{}
+lspconfig.cmake.setup{}
+lspconfig.jsonls.setup{}
 
 -- Register a handler that will be called for all installed servers.
 -- Alternatively, you may also register handlers on specific server instances instead (see example below).

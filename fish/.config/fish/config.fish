@@ -60,6 +60,10 @@ function fish_user_key_bindings
 	bind \cn history-search-forward
 	bind -M insert \el 'clear; commandline -f repaint'
 	bind \el 'clear; commandline -f repaint'
+	bind -M insert \ca beginning-of-line
+	bind \ca beginning-of-line
+	bind -M insert \ce end-of-line
+	bind \ce end-of-line
 end
 
 function fish_greeting

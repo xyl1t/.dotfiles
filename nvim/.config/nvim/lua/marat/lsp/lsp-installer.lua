@@ -6,22 +6,27 @@ if not status_ok then
     return
 end
 
-lspconfig.sumneko_lua.setup{
-	settings = {
-		Lua = {
-			diagnostics = {
-				-- Get the language server to recognize the `vim` global
-				globals = {'vim'},
-			},
-		},
-	}
-}
-lspconfig.tsserver.setup{}
-lspconfig.clangd.setup{}
-lspconfig.jdtls.setup{}
-lspconfig.cmake.setup{}
-lspconfig.cmake.setup{}
-lspconfig.jsonls.setup{}
+
+local servers = { 'sumneko_lua', 'tsserver', 'clangd', 'jdtls', 'cmake', 'cmake', 'jsonls', 'rust_analyzer' }
+for _, lsp in pairs(servers) do
+	if lsp == 'sumneko_lua' then
+		require('lspconfig')[lsp].setup {
+			on_attach = require("marat.lsp.handlers").on_attach,
+			settings = {
+				Lua = {
+					diagnostics = {
+						-- Get the language server to recognize the `vim` global
+						globals = {'vim'},
+					},
+				},
+			}
+		}
+	else
+		require('lspconfig')[lsp].setup {
+			on_attach = require("marat.lsp.handlers").on_attach,
+		}
+	end
+end
 
 -- Register a handler that will be called for all installed servers.
 -- Alternatively, you may also register handlers on specific server instances instead (see example below).

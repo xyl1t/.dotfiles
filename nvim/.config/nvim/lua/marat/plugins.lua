@@ -51,7 +51,7 @@ return packer.startup{function(use)
 	use "nvim-neorg/neorg"
 
 	-- visual sugar
-	use "ap/vim-css-color"                           -- a very fast, multi-syntax context-sensitive color name highlighter alternative: https://github.com/norcalli/nvim-colorizer.lua
+	use {"norcalli/nvim-colorizer.lua", config = function() require'colorizer'.setup() end }                -- a very fast, multi-syntax context-sensitive color name highlighter alternative: https://github.com/norcalli/nvim-colorizer.lua
 	-- use {"junegunn/goyo.vim", cmd = "Goyo"}          -- Distraction-free writing in Vim.
 	use "kyazdani42/nvim-web-devicons"               -- icons
 	use "psliwka/vim-smoothie"                       -- smooth scrolling
@@ -118,6 +118,7 @@ return packer.startup{function(use)
 	-- use 'michaelb/sniprun'                           -- Sniprun is a code runner plugin for neovim written in Lua and Rust.
 	use "wellle/targets.vim"                         -- adds various text objects to give you more targets to operate on.
 	use "christoomey/vim-tmux-navigator"             -- seamless tmux panes and vim windows navigation
+	use 'andymass/vim-matchup'
 
 	-- Telescope
 	use "nvim-telescope/telescope.nvim"

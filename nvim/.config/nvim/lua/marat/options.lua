@@ -99,3 +99,7 @@ vim.cmd[[set makeprg=make\ -C\ ../build\ -j8]]
 
 -- vim.cmd[[runtime macros/matchit.vim]]
 
+-- targets.vim: swap i and I
+vim.cmd[[
+let g:targets_aiAI = 'aIAi'
+]]

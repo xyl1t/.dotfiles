@@ -95,7 +95,7 @@ return packer.startup{function(use)
 	-- use "justinmk/vim-sneak"
 	use {"akinsho/toggleterm.nvim", tag = 'v1.*'}    -- better terminal
 	use "szw/vim-maximizer"                          -- maximize a window
-	use "puremourning/vimspector"                    -- visual debugger
+	-- use "puremourning/vimspector"                    -- visual debugger
 	-- use "akinsho/bufferline.nvim"                    -- A buffer line for Neovim made with lua
 	use {'akinsho/bufferline.nvim', tag = "v2.*", requires = 'kyazdani42/nvim-web-devicons'}
 	use "moll/vim-bbye"                              -- Better buffer closing

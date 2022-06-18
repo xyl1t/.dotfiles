@@ -7,7 +7,7 @@ if not status_ok then
 end
 
 
-local servers = { 'sumneko_lua', 'tsserver', 'clangd', 'jdtls', 'cmake', 'cmake', 'jsonls', 'rust_analyzer' }
+local servers = { 'sumneko_lua', 'tsserver', 'clangd', 'jdtls', 'cmake', 'cmake', 'jsonls', 'rust_analyzer', 'sourcekit' }
 for _, lsp in pairs(servers) do
 	if lsp == 'sumneko_lua' then
 		require('lspconfig')[lsp].setup {

@@ -16,8 +16,8 @@ vim.opt.pumheight = 16             -- pop up menu height
 vim.opt.showmode = false           -- we don't need to see things like -- INSERT -- anymore
 vim.o.modeline = false             -- I don't know if I need this, it gives me errors on some files, so I disabled it
 vim.opt.showtabline = 2            -- only show tabs when more than 1, option 2 always show tabs
-vim.opt.smartcase = true           -- smart case
-vim.opt.smartindent = true         -- make indenting smarter again
+vim.opt.smartindent = false         -- make indenting smarter again - Edit: NO, it does not make indentation smarter, actually dumber! cindent is better
+vim.opt.cindent = false             -- smarter than `smartindent` - Edit: actually, still dumb
 vim.opt.splitbelow = true          -- force all horizontal splits to go below current window
 vim.opt.splitright = true          -- force all vertical splits to go to the right of current window
 vim.opt.swapfile = false           -- creates a swapfile
@@ -63,6 +63,8 @@ vim.cmd "set fcs=eob:\\ "
 -- vim.cmd [[highlight ColorColumn gui=inverse cterm=inverse]]
 vim.cmd [[autocmd FileType cpp,c,javascript,java,sql call matchadd('ColorColumn', '\%81v', 100)]]
 vim.cmd [[autocmd FileType cpp,c set makeprg=make\ -C\ ./build\ -j9]]
+
+vim.cmd [[autocmd FileType swift set nosi noai]]
 
 -- vim.cmd[[autocmd FileType javascript,css,html,json,markdown,md,pandoc setlocal shiftwidth=2 softtabstop=2 expandtab]]
 

@@ -6,8 +6,9 @@ if not status_ok then
     return
 end
 
+local util = require'lspconfig/util'
 
-local servers = { 'sumneko_lua', 'tsserver', 'clangd', 'jdtls', 'cmake', 'cmake', 'jsonls', 'rust_analyzer', 'sourcekit' }
+local servers = { 'sumneko_lua', 'tsserver', 'clangd', 'jdtls', 'cmake', 'jsonls', 'rust_analyzer', 'sourcekit' }
 for _, lsp in pairs(servers) do
 	if lsp == 'sumneko_lua' then
 		require('lspconfig')[lsp].setup {
@@ -20,6 +21,11 @@ for _, lsp in pairs(servers) do
 					},
 				},
 			}
+		}
+	elseif lsp == 'sourcekit' then
+		require('lspconfig')[lsp].setup {
+			on_attach = require("marat.lsp.handlers").on_attach,
+			root_dir = util.root_pattern("*.swift")
 		}
 	else
 		require('lspconfig')[lsp].setup {

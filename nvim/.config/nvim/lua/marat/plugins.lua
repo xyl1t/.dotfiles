@@ -66,9 +66,9 @@ return packer.startup{function(use)
 	use "powerman/vim-plugin-AnsiEsc"
 
 	-- colorscheme
-	use "ellisonleao/gruvbox.nvim"
+	-- use "ellisonleao/gruvbox.nvim"
 	use "rebelot/kanagawa.nvim"
-	-- use "mhdahmad/gruvbox.nvim"
+	use "mhdahmad/gruvbox.nvim"
 	use "sainnhe/sonokai"
 	use "lunarVim/colorschemes"
 	use {"catppuccin/nvim", as = "catppuccin"}

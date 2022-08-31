@@ -2,6 +2,7 @@ local M = {}
 
 M.custom = {
     n = {
+        ["gi"] = { "gi" },
         ["J"] = { "5gj", "5 lines down"},
         -- ["gJ"] = { "J", "Merge lines"},
         ["gj"] = { "J", "Merge lines"},

@@ -86,6 +86,7 @@ M.plugins = {
     },
 
     override = {
+        ["nvim-treesitter/nvim-treesitter"] = overrides.treesitter,
         ["kyazdani42/nvim-tree.lua"] = overrides.nvimtree,
         ["goolord/alpha-nvim"] = overrides.alpha,
         ["folke/which-key"] = overrides.whichkey,

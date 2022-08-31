@@ -1,6 +1,5 @@
 local M = {}
 
-
 M.treesitter = {
     ensure_installed = {
         "vim",
@@ -9,13 +8,18 @@ M.treesitter = {
         "javascript",
         "json",
         "toml",
+        "yaml",
+        "http",
         "markdown",
         "c",
         "cpp",
         "rust",
         "bash",
         "lua",
-        "norg",
+    },
+    indent = {
+        enable = true,
+        additional_vim_regex_highlighting = false,
     },
 }
 
@@ -82,6 +86,7 @@ M.telescope = function()
 end
 
 M.blankline = {
+    -- use_treesitter = true,
     show_current_context = true,
     show_current_context_start = false,
     filetype_exclude = {

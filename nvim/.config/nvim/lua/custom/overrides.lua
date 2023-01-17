@@ -43,27 +43,6 @@ M.nvimtree = {
     },
 }
 
-M.alpha = function()
-    -- local colors = require("base46").get_theme_tb "base_30"
-    -- vim.api.nvim_set_hl(0, "AlphaHeader", {fg = colors.sun})
-
-    return {
-        header = {
-            val = {
-                "           ▄ ▄                    ",
-                "       ▄   ▄▄▄     ▄ ▄▄▄ ▄ ▄      ",
-                "       █ ▄ █▄█ ▄▄▄ █ █▄█ █ █      ",
-                "    ▄▄ █▄█▄▄▄█ █▄█▄█▄▄█▄▄█ █      ",
-                "  ▄ █▄▄█ ▄ ▄▄ ▄█ ▄▄▄▄▄▄▄▄▄▄▄▄▄▄   ",
-                "  █▄▄▄▄ ▄▄▄ █ ▄ ▄▄▄ ▄ ▄▄▄ ▄ ▄ █ ▄ ",
-                "▄ █ █▄█ █▄█ █ █ █▄█ █ █▄█ ▄▄▄ █ █ ",
-                "█▄█ ▄ █▄▄█▄▄█ █ ▄▄█ █ ▄ █ █▄█▄█ █ ",
-                "    █▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█ █▄█▄▄▄█     ",
-            },
-        },
-    }
-end
-
 M.whichkey = function()
     return {
         spelling = {

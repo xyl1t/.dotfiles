@@ -2,11 +2,14 @@ local M = {}
 
 M.custom = {
     n = {
-        ["gi"] = { "gi" },
-        ["J"] = { "5gj", "5 lines down"},
+        -- ["J"] = { "5gj", "5 lines down"},
         -- ["gJ"] = { "J", "Merge lines"},
-        ["gj"] = { "J", "Merge lines"},
-        ["K"] = { "5gk", "5 lines up"},
+        -- ["gj"] = { "J", "Merge lines"},
+        -- ["K"] = { "5gk", "5 lines up"},
+        ["<C-d>"] = { "<C-d>zz", "Scroll down halfpage" },
+        ["<C-u>"] = { "<C-u>zz", "Scroll up halfpage" },
+        ["<C-f>"] = { "<C-f>zz", "Scroll down fullpage" },
+        ["<C-b>"] = { "<C-b>zz", "Scroll up fullpage" },
         ["+"] = { "<C-a>", "Increment" },
         ["-"] = { "<C-x>", "Decrement" },
         ["<space><space>"] = { "i la h", "Surround with sapce" },
@@ -50,6 +53,12 @@ M.custom = {
     },
 }
 
+M.windows = {
+    n = {
+        ["<leader>m"] = { "<Cmd>WindowsMaximize<CR>", "Maximize window" }
+    }
+}
+
 M.lsp = {
     n = {
         -- ["<leader>j"] = {"<CMD>lua vim.diagnostic.goto_next()<CR>", "Next diagnostic"},
@@ -61,21 +70,22 @@ M.lsp = {
         ["<leader>lp"] = {"<cmd>Lspsaga preview_definition<CR>", "Preview definition"},
         ["<leader>ld"] = {"<cmd>Lspsaga show_cursor_diagnostics<CR>", "Show cursor diagnostics"},
         ["<leader>lk"] = {"<cmd>Lspsaga hover_doc<CR>", "Documentation"},
-        ["<leader>ls"] = {"<Cmd>Lspsaga signature_help<CR>", "Signature help"},
+        -- ["<leader>ls"] = {"<Cmd>Lspsaga signature_help<CR>", "Signature help"},
         ["<leader>la"] = {"<Cmd>Lspsaga code_action<CR>", "Code action"},
+        ["<leader>ls"] = {"<Cmd>Telescope lsp_dynamic_workspace_symbols<CR>", "Dynamic workspace symbols"},
     }
 }
 
 M.git = {
     n = {
-		["<leader>gj"] = { function() require 'gitsigns'.next_hunk() end, "Next Hunk" },
-		["<leader>gk"] = { function() require 'gitsigns'.prev_hunk() end, "Prev Hunk" },
-		["<leader>gl"] = { function() require 'gitsigns'.blame_line() end, "Blame" },
-		["<leader>gp"] = { function() require 'gitsigns'.preview_hunk() end, "Preview Hunk" },
-		["<leader>gr"] = { function() require 'gitsigns'.reset_hunk() end, "Reset Hunk" },
-		["<leader>gR"] = { function() require 'gitsigns'.reset_buffer() end, "Reset Buffer" },
-		["<leader>gs"] = { function() require 'gitsigns'.stage_hunk() end, "Stage Hunk" },
-		["<leader>gu"] = { function() require 'gitsigns'.undo_stage_hunk() end, "Undo Stage Hunk" },
+		["<leader>gj"] = { function() require'gitsigns'.next_hunk() end, "Next Hunk" },
+		["<leader>gk"] = { function() require'gitsigns'.prev_hunk() end, "Prev Hunk" },
+		["<leader>gl"] = { function() require'gitsigns'.blame_line() end, "Blame" },
+		["<leader>gp"] = { function() require'gitsigns'.preview_hunk() end, "Preview Hunk" },
+		["<leader>gr"] = { function() require'gitsigns'.reset_hunk() end, "Reset Hunk" },
+		["<leader>gR"] = { function() require'gitsigns'.reset_buffer() end, "Reset Buffer" },
+		["<leader>gs"] = { function() require'gitsigns'.stage_hunk() end, "Stage Hunk" },
+		["<leader>gu"] = { function() require'gitsigns'.undo_stage_hunk() end, "Undo Stage Hunk" },
 		["<leader>go"] = { "<cmd>Telescope git_status<cr>", "Open changed file" },
 		["<leader>gb"] = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
 		["<leader>gc"] = { "<cmd>Telescope git_commits<cr>", "Checkout commit" },
@@ -89,6 +99,13 @@ M.easyAlign = {
     },
     x = {
         ["ga"] = { "<Plug>(EasyAlign)", "Align" }
+    }
+}
+
+M.disabled = {
+    n = {
+        ["gi"] = "",
+        ["<leader>pt"] = "",
     }
 }
 

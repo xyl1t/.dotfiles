@@ -5,10 +5,14 @@ vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.relativenumber = true
 vim.opt.numberwidth = 2
-vim.opt.scrolloff = 8
-vim.opt.sidescrolloff = 16
+vim.opt.scrolloff = 4
+vim.opt.sidescrolloff = 8
 vim.opt.list = true
 vim.opt.listchars = {tab = '  ', extends = '>', precedes = '<', nbsp = '␣', trail = '·'}
+vim.opt.textwidth = 79
+vim.opt.colorcolumn = "+1"
+vim.opt.inccommand = "split"
+vim.opt.wrap = false
 
 -- make cursor always white
 vim.cmd[[
@@ -45,4 +49,10 @@ command! TrimWhitespace call TrimWhitespace()
 map <F2> :TrimWhitespace<CR>
 map! <F2> :TrimWhiteSpace<CR>
 ]]
+
+
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = { "html", "css", "javascript", "typescript", "javascriptreact", "typescriptreact", "jsx", "tsx" },
+    command = "setlocal tabstop=2 shiftwidth=2",
+})
 

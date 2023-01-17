@@ -3,7 +3,7 @@ if status is-interactive
 end
 
 # SETTINGS
-export VISUAL=vim
+export VISUAL=nvim
 export EDITOR="$VISUAL"
 export JDTLS_HOME=~/.local/share/nvim/lsp_servers/jdtls # Directory with the plugin and configs directories
 export PATH="$HOME/.cargo/bin:$PATH"
@@ -69,7 +69,7 @@ end
 
 function fish_greeting
 
-pfetch
+# pfetch
 end
 
 # misc

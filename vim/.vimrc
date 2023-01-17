@@ -10,7 +10,7 @@ let mapleader=" "
 set splitright
 set splitbelow
 
-" set clipboard=unnamedplus
+set clipboard=unnamedplus
 
 " if (has("termguicolors"))
 " 	set termguicolors " true color

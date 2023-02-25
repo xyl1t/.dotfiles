@@ -10,7 +10,7 @@ let mapleader=" "
 set splitright
 set splitbelow
 
-set clipboard=unnamedplus
+set clipboard=unnamed
 
 " if (has("termguicolors"))
 " 	set termguicolors " true color
@@ -26,6 +26,7 @@ set belloff=all
 let g:netrw_banner=0
 " display netrw as tree
 let g:netrw_liststyle=3
+let g:netrw_winsize=24
 
 " Let's save undo info!
 if !isdirectory($HOME."/.vim")
@@ -74,6 +75,7 @@ set hlsearch
 set incsearch
 set linebreak
 map <silent> <leader><cr> :noh<cr>
+map <silent> <esc> :noh<cr>
 
 " avoid most of the 'Hit Enter ...' messages
 set shortmess=aoOtI
@@ -193,6 +195,8 @@ map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
+
+map <C-n> :Lex<CR>
 
 " functions keys
 map <F1> :set number!<CR> :set relativenumber!<CR>

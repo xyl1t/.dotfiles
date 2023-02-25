@@ -1,3 +1,5 @@
+eval $(/opt/homebrew/bin/brew shellenv)
+
 if status is-interactive
     # Commands to run in interactive sessions can go here
 end
@@ -48,6 +50,7 @@ case Darwin
 	source ~/.iterm2_shell_integration.fish
 
 	fish_add_path /usr/local/sbin
+    fish_add_path /Users/marat/Library/Python/3.9/bin
 end
 
 # this is makes it so that ctrl+f works in vi mode
@@ -75,3 +78,7 @@ end
 # misc
 # bat theme
 set -xU BAT_THEME gruvbox-dark
+
+# bun
+set --export BUN_INSTALL "$HOME/.bun"
+set --export PATH $BUN_INSTALL/bin $PATH

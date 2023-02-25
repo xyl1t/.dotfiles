@@ -52,7 +52,7 @@ map! <F2> :TrimWhiteSpace<CR>
 
 
 vim.api.nvim_create_autocmd("FileType", {
-    pattern = { "html", "css", "javascript", "typescript", "javascriptreact", "typescriptreact", "jsx", "tsx" },
+    pattern = { "json", "html", "css", "javascript", "typescript", "javascriptreact", "typescriptreact", "jsx", "tsx" },
     command = "setlocal tabstop=2 shiftwidth=2",
 })
 

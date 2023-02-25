@@ -23,6 +23,14 @@ return {
         end
     },
 
+    ["andweeb/presence.nvim"] = {},
+
+    ["folke/todo-comments.nvim"] = {
+        config = function()
+            require('todo-comments').setup{}
+        end
+    },
+
     -- ["karb94/neoscroll.nvim"] = {
     --     config = function()
     --         require('neoscroll').setup({
@@ -68,13 +76,12 @@ return {
         config = function() require'range-highlight'.setup{} end
     },
 
-    ["mjbrownie/swapit"] = {},
+    -- ["mjbrownie/swapit"] = {},
 
     ["glepnir/lspsaga.nvim"] = {
         branch = 'main',
         config = function()
-            local saga = require("lspsaga")
-            saga.init_lsp_saga()
+            require('lspsaga').setup({})
         end
     },
 
@@ -120,7 +127,7 @@ return {
     ["nvim-treesitter/nvim-treesitter"] = {
         override_options = overrides.treesitter,
     },
-    ["kyazdani42/nvim-tree.lua"] = {
+    ["nvim-tree/nvim-tree.lua"] = {
         override_options = overrides.nvimtree,
     },
     ["goolord/alpha-nvim"] = {

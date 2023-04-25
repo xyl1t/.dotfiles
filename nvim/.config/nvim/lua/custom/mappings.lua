@@ -19,6 +19,7 @@ M.custom = {
         ["<leader>p"] = { 'my"yyy"yP`y', "Copy up" },
         ["yP"] = { 'my"yyy"yp`y', "Copy down" },
         ["<leader>P"] = { 'my"yyy"yp`y', "Copy down" },
+        ["<leader>a"] = { '<cmd>set arabic!<CR>', "Toggle Arabic" },
     },
 
     x = {

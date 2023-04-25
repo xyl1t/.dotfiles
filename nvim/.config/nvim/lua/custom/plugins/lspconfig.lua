@@ -4,18 +4,19 @@ local capabilities = require("plugins.configs.lspconfig").capabilities
 local lspconfig = require("lspconfig")
 local servers = {
     "pylsp",
-    "sumneko_lua",
+    "lua_ls",
     "html",
     "cssls",
     "emmet_ls",
     "clangd",
     "jsonls",
     "tsserver",
+    "tailwindcss"
     -- "sourcekit",
 }
 
 for _, lsp in ipairs(servers) do
-    if lsp == "sumneko_lua" then
+    if lsp == "lua_ls" then
         lspconfig[lsp].setup({
             on_attach = on_attach,
             capabilities = capabilities,

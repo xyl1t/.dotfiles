@@ -14,6 +14,13 @@ vim.opt.colorcolumn = "+1"
 vim.opt.inccommand = "split"
 vim.opt.wrap = false
 
+vim.g.maplocalleader = ","
+vim.g.vimtex_view_method = 'skim'
+vim.g.vimtex_compiler_method = 'latexmk'
+vim.g.vimtex_compiler_latexmk = {
+    build_dir = "./out"
+}
+
 -- make cursor always white
 vim.cmd[[
 highlight Cursor guifg=white guibg=black
@@ -24,13 +31,21 @@ set guicursor+=n-v-c:blinkon0
 set guicursor+=i:blinkwait10
 ]]
 
--- highlight yanked text for 200ms
-vim.cmd[[
-augroup highlight_yank
-    autocmd!
-    au TextYankPost * silent! lua vim.highlight.on_yank {higroup="Visual", timeout=150}
-augroup END
-]]
+local augroup = vim.api.nvim_create_augroup   -- Create/get autocommand group
+local autocmd = vim.api.nvim_create_autocmd   -- Create autocommand
+
+-- highlight on yank
+augroup('YankHighlight', { clear = true })
+autocmd('TextYankPost', {
+  group = 'YankHighlight',
+  callback = function()
+    vim.highlight.on_yank({ higroup = 'Visual', timeout = '150' })
+  end
+})
+
+
+-- disable incorrect indentation for swift files
+vim.cmd[[autocmd FileType tex set wrap]]
 
 -- disable incorrect indentation for swift files
 vim.cmd[[autocmd FileType swift set nosi nocindent ai]]

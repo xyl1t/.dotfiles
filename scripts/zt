@@ -1,0 +1,28 @@
+#!/opt/homebrew/bin/fish
+
+#ct (z $argv[1] -e)
+ct (zoxide query $argv[1])
+
+# set path (z $argv[1] -e)
+# set name (basename $path)
+#
+# echo $path
+# echo $name
+#
+# if not pgrep tmux
+#     tmux new-session -s $name -c $path
+#     exit 0
+# end
+#
+# tmux attach >2 /dev/null
+#
+# if tmux has-session -t $name
+#     echo has session
+# else
+#     echo creating new session
+#     tmux new-session -s $name -c $path -d 
+# end
+#
+# tmux switch-client -t $name
+
+# vim: ft=fish

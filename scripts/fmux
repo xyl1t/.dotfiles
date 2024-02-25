@@ -1,0 +1,20 @@
+#!/opt/homebrew/bin/fish
+
+set ignore_dirs ".bun" ".platformio" ".dotnet" ".sqldeveloper" ".npm" ".vscode" "node_modules" "Library" ".git" ".gradle" "Library" ".Trash"
+
+for i in $ignore_dirs
+    # echo $i
+    # NOTE: don't do `set ignore "$ignore-o -name $i "` because it won't be a list otherwise... fish...
+    set ignore $ignore "-o" "-name" "$i"
+end
+set -e ignore[1]
+
+# echo $ignore
+
+set selected (find ~ -maxdepth 8 -type d \( $ignore \) -prune -o -name '*' -type d -print | fzf)
+
+echo $selected
+
+ct $selected
+
+# vim: ft=fish

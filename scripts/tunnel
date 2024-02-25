@@ -1,0 +1,75 @@
+#!/bin/bash
+
+set -e
+
+GREEN='\033[0;32m'
+RED='\033[0;31m'
+CYAN='\033[0;36m'
+NC='\033[0m' # No Color
+
+# Function to display script usage
+usage() {
+    cat << EOF
+Usage: $0 [-p ssh_port] user@server port_1 port_2 port_n
+EOF
+    exit 1
+}
+
+# Default SSH port
+ssh_port=22
+
+# Parse command-line options using getopts
+while getopts ":p:" opt; do
+    case $opt in
+        p)
+            ssh_port=$OPTARG
+            ;;
+        \?)
+            echo "Invalid option: -$OPTARG" >&2
+            usage
+            ;;
+        :)
+            echo "Option -$OPTARG requires an argument." >&2
+            usage
+            ;;
+    esac
+done
+
+# Shift to process non-option arguments
+shift $((OPTIND - 1))
+
+# Check if there are enough non-option arguments
+if [ "$#" -lt 2 ]; then
+    echo "Error: Insufficient arguments."
+    usage
+fi
+
+# Extract user@server and ports from remaining arguments
+server="$1"
+shift
+ports="$@"
+
+# Function to clean up and close SSH tunnels
+function cleanup() {
+    for tunnel_port in $ports; do
+        echo -e "${RED}closing${NC} ssh tunnel for port ${CYAN}$tunnel_port${NC}"
+        ssh -S ctrl-socket-${tunnel_port} -O exit $server
+    done
+    exit 0
+}
+
+# Set up signal handling for cleanup on Ctrl+C
+trap cleanup SIGINT
+
+# Create SSH tunnels based on the provided options and arguments
+for tunnel_port in $ports; do
+    echo -e "${GREEN}opening${NC} ssh tunnel for port ${CYAN}$tunnel_port${NC}"
+    ssh -M -S ctrl-socket-${tunnel_port} -fNT -L ${tunnel_port}:localhost:${tunnel_port} -p $ssh_port $server
+done
+
+# Wait for user input before closing SSH tunnels
+echo ""
+read -rep $'Press any key to close the ssh tunnels\n' msg
+
+# Clean up and close SSH tunnels
+cleanup

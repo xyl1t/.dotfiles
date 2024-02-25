@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+
+if [ "$1" == "-h" ]
+	then
+	echo "movtomp4 <input.mov> [output.mp4]"
+	exit 1
+fi
+
+#if [ "$in" == "mov" ] 
+#	then 
+	if [ $# -eq 1 ] 
+	then
+		out="${1%.*}".mp4
+		ffmpeg -i "$1" -vcodec h264 -acodec mp2 "$(basename $1 .mov)".mp4
+	elif [ $# -ge 2 ] 
+	then
+		ffmpeg -i "$1" -vcodec h264 -acodec mp2 "$2"
+	else
+		echo "Error: No input file"
+	fi
+#else
+#	echo "Error: Input is not a .mov file"
+#fi

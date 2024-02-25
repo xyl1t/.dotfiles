@@ -74,8 +74,8 @@ set sidescrolloff=4
 set hlsearch
 set incsearch
 set linebreak
-map <silent> <leader><cr> :noh<cr>
-map <silent> <esc> :noh<cr>
+nmap <silent> <leader><cr> :noh<cr>
+" nmap <silent> <esc> :noh<cr> " causes vim to enter in `REPLACE` mode
 
 " avoid most of the 'Hit Enter ...' messages
 set shortmess=aoOtI
@@ -149,6 +149,7 @@ if filereadable(expand("~/.vim/autoload/plug.vim"))
 	call plug#begin('~/.vim/plugged')
 	Plug 'vim-pandoc/vim-pandoc'
 	Plug 'https://gitlab.com/rwxrob/vim-pandoc-syntax-simple'
+	Plug 'ctrlpvim/ctrlp.vim'
 	" Plug 'christoomey/vim-tmux-navigator'
 	" Plug 'cespare/vim-toml'
 	" Plug 'fatih/vim-go'
